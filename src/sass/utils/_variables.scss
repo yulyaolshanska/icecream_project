@@ -1,20 +1,46 @@
-//color palette
+// Основной цвет фона #fff
+// Вторичный цвет фона #fff5f6
+// Основной цвет текста #000
+// Вторичный цвет текста #907e82
+// Основной цвет заголовка #d41443
+// Вторичный цвет заголовка #fff
+
+// Основной цвет текста кнопки #d41443
+// Вторичный цвет текста кнопки #fff
+// Основной цвет фона кнопки #fff
+// Вторичный цвет фона кнопки #d41443
+// Цвет фона кнопки в фокусе #ecebeb
+// Цвет текста кнопки в фокусе #d41443
+
+// Цвет пункта моб. меню #fff
+// Цвет пункта моб. меню в фокусе #d41443
+
+// Цвет фона мобильного меню #E17992
+
+// Цвета фона карточек продуктов #FFB8CA   #f0d1a5   #c2e297
 :root {
   --brand-color: #ffb8ca;
   --light-brand-color: #fff5f6;
   --dark-brand-color: #ffa5ba;
   --accent-color: #d41443;
 
-  --main-white: #fff;
-  --main-black: #000;
+  --main-background-color: #fff;
 
-  --coffee: #f0d1a5;
-  --light-green: #c2e297;
-
+  --main-text-color: #000;
   --secondary-text-color: #907e82;
+
+  --products-second-card-color: #f0d1a5;
+  --products-third-card-color: #c2e297;
+
+  --button-focuse-background-color: #ecebeb;
+
+  --mobile-menu-background-color: #e17992;
+
+  --button-border-radius: 22px;
+  --card-border-radius: 24px;
 }
 
-//breakpoints
+//        breakpoints
 $mobile: 480px;
 $mobile-only: 767px;
 $tablet: 768px;
