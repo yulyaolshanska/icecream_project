@@ -1,0 +1,22 @@
+//color palette
+:root {
+  --brand-color: #ffb8ca;
+  --light-brand-color: #fff5f6;
+  --dark-brand-color: #ffa5ba;
+  --accent-color: #d41443;
+
+  --main-white: #fff;
+  --main-black: #000;
+
+  --coffee: #f0d1a5;
+  --light-green: #c2e297;
+
+  --secondary-text-color: #907e82;
+}
+
+//breakpoints
+$mobile: 480px;
+$mobile-only: 767px;
+$tablet: 768px;
+$tablet-only: 1279px;
+$desktop: 1280px;
