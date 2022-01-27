@@ -1,0 +1,55 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+.section {
+  @media screen and (max-width: $mobile-only) {
+   padding-top: 40px;
+   padding-bottom: 40px;
+}}
+
+.section__title {
+ 
+ font-family: "Titan One", sans-serif;
+font-size: 34px;
+ line-height: 1.15;
+ text-align: center;
+ letter-spacing: 0.04em;
+ text-transform: uppercase;
+  
+
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+    
+  }
+   @media screen and (min-width: $desktop){
+  font-size: 58px;
+  line-height: 1.14;
+ letter-spacing: 0.06em;}
+
+  &--is-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
