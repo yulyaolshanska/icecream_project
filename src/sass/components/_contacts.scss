@@ -90,11 +90,38 @@
 .contacts__text {
   color: var(--secondary-text-color);
   letter-spacing: 0;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 .worktime {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+
+  &::before {
+    content: '';
+    border-top: 1px solid #e1e1e1;
+    width: 100%;
+    display: block;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &::after {
+    content: '';
+    border-top: 1px solid #e1e1e1;
+    width: 100%;
+    display: block;
+    margin-top: 25px;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: 30px;
+    }
+  }
 }
 
 .worktime__workdays {
