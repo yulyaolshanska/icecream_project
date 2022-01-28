@@ -1,22 +1,50 @@
 .about__section {
      background-color: var(--light-section-bgc);
-     background-image: url('../images/About/about-background-mobile.png');
-     background-size: 100%;
-     background-repeat: no-repeat;
-     background-position: 50% 90%;
+    
+      @media screen and (max-width: $mobile-only) {
+        background-image: url('../images/About/about-background-mobile.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 90%;
+
+      }
 
 
  }
+
+ .about__flex {
+          @media screen and (min-width: $tablet) {
+              display: flex;
+             
+          }
+ }
 .about__title {
     margin-bottom: 26px;
+
+     @media screen and (min-width: $tablet) {
+             margin-bottom: 50px;
+
+     }
 }
 
 .about__img {
+     @media screen and (max-width: $mobile-only) {
     margin-bottom: 46px;
+
+     }
+
+     @media screen and (min-width: $tablet) {
+    //    width: calc((100% - 37px) / 2);
+       margin-right: 20px;
+     }
 }
 
 .text-box {
-    margin-bottom: 20px;
+   @media screen and (min-width: $tablet){
+         width: calc((100% - 20px) / 2);
+     }
+
+      
 }
 .about__text {
     font-weight: 500;
@@ -34,6 +62,10 @@
         margin-bottom: 20px;
     }
 }
-.about__bcg {
+
+.about__btn {
+     @media screen and (min-width: $tablet) {
+         margin-top: 40px;
+     }
 
 }
