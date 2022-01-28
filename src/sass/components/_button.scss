@@ -11,6 +11,15 @@
   padding: 0 20px;
   transition: color 250ms linear;
   transition: background-color 250ms linear;
+
+  &::after {
+    content: '';
+    background-image: url('../images/contacts/greater-than.svg');
+    height: 10px;
+    width: 6px;
+    display: inline-block;
+    margin-left: 11px;
+  }
 }
 
 .button--pink {
