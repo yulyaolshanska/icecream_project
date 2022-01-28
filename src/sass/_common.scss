@@ -17,14 +17,14 @@
 
   @media screen and (min-width: $desktop) {
     width: $desktop;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 115px;
+    padding-right: 115px;
   }
 }
 
 .section {
   @media screen and (max-width: $mobile-only) {
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
   @media screen and (min-width: $tablet) {
     padding-bottom: 110px;
