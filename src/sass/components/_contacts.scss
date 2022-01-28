@@ -12,8 +12,17 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/Contacts/contact-bg-desctop@2x.png'),
+        linear-gradient(to bottom, var(--main-bgc) 20%, var(--light-brand-color) 20%);
+    }
   }
 }
+
 .contacts {
   margin-bottom: 54px;
   @media screen and (min-width: $tablet) {
@@ -49,7 +58,6 @@
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 330px;
     font-size: 16px;
     margin-top: 30px;
     margin-left: 30px;
