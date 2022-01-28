@@ -33,6 +33,7 @@
   width: 220px;
   margin: 0 auto;
   @include text(500, 12px, 1.86, 0.04em, var(--main-text-color));
+
   background-color: var(--main-bgc);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
@@ -67,10 +68,12 @@
 .contacts__description {
   display: inline-block;
   padding: 0 24px;
+  text-transform: uppercase;
   color: var(--main-bgc);
   background-color: var(--products-second-card-color);
   margin-bottom: 25px;
   border-radius: 4px;
+
   @media screen and (min-width: $tablet) {
     font-size: 16px;
   }
@@ -90,19 +93,19 @@
   margin-bottom: 50px;
 }
 
-.contacts__worktime {
+.worktime {
   margin-bottom: 50px;
 }
 
-.conntacts__workdays {
+.worktime__workdays {
   margin-bottom: 10px;
 }
 
-.contacts__day {
+.worktime__day {
   letter-spacing: 0;
 }
 
-.contacts__time {
+.worktime__time {
   color: var(--dark-brand-color);
 }
 
