@@ -1,0 +1,34 @@
+.button {
+  cursor: pointer;
+  height: 44px;
+  min-width: 64px;
+  border: none;
+  border-radius: var(--button-border-radius);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.29;
+  padding: 0 20px;
+  transition: color 250ms linear;
+  transition: background-color 250ms linear;
+}
+
+.button--pink {
+  color: var(--main-bgc);
+  background-color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-button-bgc);
+  }
+}
+
+.button--white {
+  color: var(--accent-color);
+  background-color: var(--main-bgc);
+
+  &:hover,
+  &:focus {
+    background-color: var(--light-button-bgc);
+  }
+}
