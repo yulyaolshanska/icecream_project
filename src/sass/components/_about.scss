@@ -1,0 +1,39 @@
+.about__section {
+     background-color: var(--light-section-bgc);
+     background-image: url('../images/About/about-background-mobile.png');
+     background-size: 100%;
+     background-repeat: no-repeat;
+     background-position: 50% 90%;
+
+
+ }
+.about__title {
+    margin-bottom: 26px;
+}
+
+.about__img {
+    margin-bottom: 46px;
+}
+
+.text-box {
+    margin-bottom: 20px;
+}
+.about__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--main-text-color);
+
+    &--light {
+        color: var(--secondary-text-color);
+        
+         
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+.about__bcg {
+
+}
