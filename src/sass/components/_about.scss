@@ -107,7 +107,7 @@
     &--light {
         color: var(--secondary-text-color);
 
-          @media screen and (min-width: $tablet {
+          @media screen and (min-width: $tablet) {
             font-size: 14px;
             line-height: 1.7;
           }
