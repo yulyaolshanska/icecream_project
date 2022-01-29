@@ -8,47 +8,54 @@ how it’s made? - является заголовком секции.
 
 <section class="section about__section">
   <div class="container">
-    <p>tradition and love</p>
+    <p class="section__label">tradition and love</p>
     <h2 class="section__title about__title">how it’s made?</h2>
     <div class="about">
-      <picture>
-        <source
-          media="(min-width: 1280px)"
-          srcset="
-            ./images/About/about-cow-desktop.png    1x,
-            ./images/About/about-cow-desktop@2x.png 2x
-          "
-        />
-        <source
-          media="(min-width: 768px)"
-          srcset="./images/About/about-cow-tablet.png 1x, ./images/About/about-cow-tablet@2x.png 2x"
-        />
-        <source
-          media="(min-width: 320px)"
-          srcset="./images/About/about-cow-mobile.png 1x, ./images/About/about-cow-mobile@2x.png 2x"
-        />
-        <img
-          src="./images/About/about-cow-tablet.png"
-          class="about__img"
-          alt="Cow with a jug of milk"
-        />
-      </picture>
+      <div class="about__flex">
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ./images/About/about-cow-desktop.png    1x,
+              ./images/About/about-cow-desktop@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/About/about-cow-tablet.png    1x,
+              ./images/About/about-cow-tablet@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 320px)"
+            srcset="
+              ./images/About/about-cow-mobile.png    1x,
+              ./images/About/about-cow-mobile@2x.png 2x
+            "
+          />
+          <img
+            src="./images/About/about-cow-tablet.png"
+            class="about__img"
+            alt="Cow with a jug of milk"
+          />
+        </picture>
 
-      <div class="text-box">
-        <p class="about__text">
-          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
-          lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
-        </p>
-        <div class="about__bcg">
+        <div class="text-box">
+          <p class="about__text">
+            Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
+            lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+          </p>
+
           <p class="about__text about__text--light">
             Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus
             orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat
             urna maximus. Cras massa nibh, tincidunt.
           </p>
           <p class="about__text about__text--light">Aliquam erat volutpat. Aenean accumsan.</p>
+          <button type="button" class="button button--white about__btn">Read more</button>
         </div>
       </div>
-      <button type="button" class="button button--white">Read more</button>
     </div>
   </div>
 </section>

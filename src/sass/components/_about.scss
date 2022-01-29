@@ -1,22 +1,90 @@
 .about__section {
      background-color: var(--light-section-bgc);
-     background-image: url('../images/About/about-background-mobile.png');
-     background-size: 100%;
-     background-repeat: no-repeat;
-     background-position: 50% 90%;
+      background-image: url('../images/About/about-background-mobile.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 90%;
+
+    
+      @media screen and (max-width: $mobile-only) {
+       
+      }
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  background-image: url('../images/About/about-background-mobile@2x.png');
+}
+
+@media screen and (min-width: 481px) {
+  background-image: url('../images/About/about-background-desktop.png');
+
+  @media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url('../images/About/about-background-desktop@2x.png');
+    }
+}
+
+@media screen and (min-width: 769px) {
+  background-image:
+    url('../images/About/about-background-desktop.png');
+
+  @media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: 
+      url('../images/About/about-background-desktop@2x.png');
+  }
+}
 
 
  }
+
+ .about__flex {
+          @media screen and (min-width: $tablet) {
+              display: flex;
+             
+          }
+ }
 .about__title {
     margin-bottom: 26px;
+
+     @media screen and (min-width: $tablet) {
+             margin-bottom: 50px;
+}
+ @media screen and (min-width: $desktop) {
+   margin-bottom: 55px;
+
+ }
 }
 
 .about__img {
+     @media screen and (max-width: $mobile-only) {
     margin-bottom: 46px;
+
+     }
+
+     @media screen and (min-width: $tablet) {
+    //    width: calc((100% - 20px) / 2);
+       margin-right: 17px;
+     }
+
+     @media screen and (min-width: $desktop) {
+      margin-right: 74px;
+     }
 }
 
 .text-box {
-    margin-bottom: 20px;
+   @media screen and (min-width: $tablet){
+         width: calc((100% - 17px) / 2);
+     }
+
+      @media screen and (min-width: $desktop) {
+        width: calc((100% - 74px) / 2);
+      }
+
+
+      
 }
 .about__text {
     font-weight: 500;
@@ -24,16 +92,48 @@
     line-height: 1.6;
     color: var(--main-text-color);
 
+     @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      line-height: 1.7;
+
+     }
+
+  @media screen and (min-width: $desktop){
+    font-size: 16px;
+  
+
+  }
+
     &--light {
         color: var(--secondary-text-color);
-        
+
+          @media screen and (min-width: $desktop) {
+            font-size: 14px;
+            line-height: 1.7;
+          }
+ 
+        @media screen and (min-width: $desktop){
+       line-height: 1.9;
+      }
          
     }
 
     &:not(:last-child) {
         margin-bottom: 20px;
+
+        @media screen and (min-width: $desktop){
+             margin-bottom: 35px;
+        }
     }
 }
-.about__bcg {
+
+.about__btn {
+     @media screen and (min-width: $tablet) {
+         margin-top: 40px;
+     }
+
+      @media screen and (min-width: $desktop) {
+        margin-top: 10px;
+      }
 
 }
