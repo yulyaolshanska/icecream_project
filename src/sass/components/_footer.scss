@@ -29,13 +29,18 @@
   }
 }
 
+.footer__title-block {
+  @media screen and (max-width: $mobile-only) {
+    margin-bottom: 43px;
+  }
+}
+
 .footer__label {
   text-align: start;
 }
 
 .footer__title {
   text-align: start;
-  margin-bottom: 43px;
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 0;
@@ -44,12 +49,20 @@
   }
 }
 
+.footer__social-block {
+  @media screen and (max-width: $mobile-only) {
+    margin-bottom: 65px;
+  }
+}
+
 .social {
   display: flex;
   justify-content: end;
-  margin-bottom: 46px;
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 50px;
+  &--margin-bottom {
+    margin-bottom: 46px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -69,6 +82,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: background-color 250ms linear;
   &:hover,
   &:focus {
     background-color: var(--accent-color);
@@ -84,7 +99,6 @@
 
 .address__text {
   display: inherit;
-  margin-bottom: 65px;
 
   @include text(700, 12px, 1.86, 0, var(--main-text-color));
 
