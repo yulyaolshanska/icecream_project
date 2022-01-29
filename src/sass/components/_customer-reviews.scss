@@ -1,12 +1,11 @@
-.reviews__container {
-}
-
 .slider {
   text-align: center;
 }
 
 .slider__item {
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 
   &::before {
     content: '';
@@ -26,6 +25,7 @@
   height: 85px;
   margin-bottom: 29px;
 }
+
 .slider__thumb {
   background-color: #fafafa;
   padding: 43px 61px 22px 61px;
@@ -81,11 +81,11 @@
   @include text(500, 14px, 1.86, 0, var(--main-text-color));
   position: relative;
 
-  &::after {
+  &::before {
     content: '';
     background-image: url('../images/сustomer-reviews/dots.svg');
     position: absolute;
-    top: -18px;
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
     width: 32px;
