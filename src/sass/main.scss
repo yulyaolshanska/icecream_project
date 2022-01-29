@@ -7,6 +7,8 @@
 @import './utils/variables';
 @import './utils/base';
 @import './common';
+@import './utils/mixin';
+@import './components/button';
 @import './components/header';
 @import './components/hero';
 @import './components/products';
@@ -16,4 +18,3 @@
 @import './components/customer-reviews';
 @import './components/contacts';
 @import './components/footer';
-@import './example';
