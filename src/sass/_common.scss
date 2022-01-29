@@ -1,82 +1,79 @@
 .container {
-  margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
-
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
-    padding-right: 15px;
-    padding-left: 15px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  
+    @media screen and (min-width: $mobile) {
+      width: $mobile;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  
+    @media screen and (min-width: $tablet) {
+      width: $tablet;
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+  
+    @media screen and (min-width: $desktop) {
+      width: 1080px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
-
-  @media screen and (min-width: $tablet) {
-    width: $tablet;
-    padding-left: 35px;
-    padding-right: 35px;
+  
+  .section {
+    @media screen and (max-width: $mobile-only) {
+      padding-bottom: 80px;
+    }
+    @media screen and (min-width: $tablet) {
+      padding-bottom: 110px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 130px;
+    }
   }
-
-  @media screen and (min-width: $desktop) {
-    width: $desktop;
-    padding-left: 115px;
-    padding-right: 115px;
+  
+  .section__title {
+    color: var(--accent-color);
+    font-family: 'Titan One', sans-serif;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+  
+    @media screen and (min-width: $tablet) {
+      font-size: 48px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 58px;
+      line-height: 1.14;
+      letter-spacing: 0.06em;
+    }
+  
+    &--is-hidden {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      overflow: hidden;
+    }
   }
-}
-
-.section {
-  @media screen and (max-width: $mobile-only) {
-    padding-bottom: 80px;
+  .section__label {
+    font-family: Titan One;
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--dark-brand-color);
+    @media screen and (min-width: $tablet) {
+      font-size: 26px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
   }
-  @media screen and (min-width: $tablet) {
-    padding-bottom: 110px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding-bottom: 130px;
-  }
-}
-
-.section__title {
-  color: var(--accent-color);
-  font-family: 'Titan One', sans-serif;
-  font-size: 34px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-
-  @media screen and (min-width: $tablet) {
-    font-size: 48px;
-  }
-  @media screen and (min-width: $desktop) {
-    font-size: 58px;
-    line-height: 1.14;
-    letter-spacing: 0.06em;
-  }
-
-  &--is-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-}
-.section__label {
-  margin-bottom: 15px;
-  font-family: Titan One;
-  font-size: 18px;
-  line-height: 1.16;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--dark-brand-color);
-  @media screen and (min-width: $tablet) {
-    font-size: 26px;
-  }
-  @media screen and (min-width: $desktop) {
-    font-size: 30px;
-    line-height: 1.13;
-    letter-spacing: 0.04em;
-  }
-}
