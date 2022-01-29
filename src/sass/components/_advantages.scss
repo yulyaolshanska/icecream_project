@@ -4,10 +4,13 @@
   }
 }
 .advantages__item {
-  margin-top: 38px;
+  &:not(:first-child) {
+    margin-top: 38px;
+  }
+
   @media screen and (min-width: 768px) {
     width: calc((100% - 2 * 60px) / 3);
-
+    margin-top: 38px;
     &:not(:first-child) {
       margin-left: 60px;
     }
@@ -63,11 +66,14 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 1.17;
+  max-width: 230px;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
+    max-width: 180px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 16px;
+    max-width: 330px;
   }
 }
