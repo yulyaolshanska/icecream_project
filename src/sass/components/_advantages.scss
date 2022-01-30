@@ -1,11 +1,11 @@
 .container__advantages {
-  margin-top: 39px;
+  padding-top: 39px;
 
   @media screen and (min-width: 768px) {
-    margin-top: 66px;
+    padding-top: 66px;
   }
   @media screen and (min-width: 1280px) {
-    margin-top: -25px;
+    padding-top: -25px;
   }
 }
 .advantages {
