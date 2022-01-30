@@ -1,3 +1,18 @@
 .gallery__img {
   width: 100%;
 }
+.persent-size {
+  width: 14%;
+}
+.persent-size-1 {
+  width: 28%;
+}
+.elements-gride {
+  height: 122px;
+  @media screen and (min-width: 768px) {
+    height: 264px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 430px;
+  }
+}
