@@ -1,3 +1,27 @@
-.gallery__img {
-  width: 100%;
+.gallery__section {
+  background: linear-gradient(180deg, #fff5f6 40%, #fff 60%);
 }
+
+.gallery__container{
+    margin: 0 auto;
+ 
+    @media screen and (min-width: $mobile) {
+      width: $mobile;
+     
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 1080px;
+     
+    }
+  }
+
+  .gallery__img {
+    width: 100%;
+  }
+
+
