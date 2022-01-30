@@ -2,7 +2,6 @@
 //   position: relative;
 // }
 
-
 .header {
   background-color: transparent;
   position: relative;
@@ -13,7 +12,6 @@
   justify-content: space-between;
   align-items: center;
   @media screen and (min-width: $desktop) {
-
   }
 }
 
@@ -31,14 +29,12 @@
   margin-right: 18px;
 }
 
-
 // оверлей
 
 // .overlay {
 //   margin-left: auto;
 //   margin-right: auto;
 
- 
 //   background-image: linear-gradient(
 //       to right,
 //       rgba(47, 48, 58, 0.4),
@@ -125,11 +121,10 @@
 
 //   overflow-y: scroll;
 
-   
 //   background-image: linear-gradient(
 //     to right,
 //     rgba(238, 174, 202, 0.8) ,
-//     rgba(178, 181, 184, 0.6)     
+//     rgba(178, 181, 184, 0.6)
 //   );
 
 //   opacity: 1;
@@ -146,54 +141,54 @@
 //     //   top: 50%;
 //     //   left: 50%;
 //     //   transform: translate(-50%, -50%);
-    
-   
+
 //   }
 
 //   // @media screen and (max-width: 767px) {
 //   //   padding: 15px 15px;
 //   // }
 
- 
 // }
-
 
 // мобильное меню
 
-
 .mobile-menu {
-  display: none;
+  // display: none;
   background-color: var(--mobile-menu-bgc);
   // position: fixed;
   padding: 48px 15px;
-  top:    0;
-  right:  0;
+  top: 0;
+  right: 0;
   z-index: 1;
   height: 100vh;
   width: 100%;
+
+  transform: translateX(100%);
+  transition: 0.5s;
+  position: fixed;
 
   @media screen and (min-width: 320px) {
     width: 250px;
     padding: 48px 20px;
 
     // transform: translatex(100%);
-    } 
-    
-     @media screen and (min-width: $tablet) {
-      width: 254px;
-      padding: 48px 24px;
-      top: 48px;
-      right: 0;
-    }
-    @media screen and (min-width: $desktop) {
-      display: flex;
-     position: static;
-     background-color: yellowgreen;
-     padding: 0;
-     width: auto;
-     height: auto;
-     margin-left: auto;
-      }
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 254px;
+    padding: 48px 24px;
+    top: 48px;
+    right: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    position: static;
+    background-color: yellowgreen;
+    padding: 0;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
 
   // &--is-open {
   //   overflow: hidden;
@@ -208,8 +203,6 @@
   //   height: 100vh;
   //   // transform: translatex(100%);
 
-
-
   //   transition-property: transform;
   //   transition-duration: 250ms;
   //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -217,11 +210,9 @@
   //   @media screen and (min-width: 320px) {
   //     width: 250px;
   //     padding: 48px 20px;
-    // }
-  
+  // }
 
   // }
- 
 }
 
 // body.mobile-menu--is-open {
@@ -230,26 +221,25 @@
 
 .mobile-menu--is-open {
   position: absolute;
-    top: 0;
-    right: 0;
+  top: 0;
+  right: 0;
   display: block;
+  transform: translateX(0);
+  transition: 0.5s;
   @media screen and (min-width: $desktop) {
-  display: none;
- 
+    display: none;
   }
 }
 @media screen and (min-width: $desktop) {
   .site-nav {
     display: block;
   }
- 
-  }
-
+}
 
 .mobile-menu__box {
   margin-left: auto;
   margin-right: auto;
- @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     // order: 2;
   }
 }
@@ -271,7 +261,7 @@
 }
 //  кнопка купить для хедера end
 
-// ====кнопка купить для моб меню 
+// ====кнопка купить для моб меню
 .mobile-menu__button {
   margin-left: auto;
   margin-right: auto;
@@ -291,9 +281,9 @@
   }
 
   @media screen and (min-width: $desktop) {
-      display: none;}
-  
- }
+    display: none;
+  }
+}
 // =======кнопка купить для моб меню end
 
 // переключатель мобильного меню
@@ -304,37 +294,31 @@
   border: transparent 1px solid;
 }
 
-
-
 .mobile-menu__switch--open {
   @media screen and (min-width: $tablet) {
-   margin-left: auto;
+    margin-left: auto;
   }
 
-@media screen and (min-width: $desktop) {
-  
-  display: none;}
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 .mobile-menu__switch--open.--is-open {
   display: none;
 }
 
 .mobile-menu__icon-cross {
-//  fill: var(--main-bgc);
-fill: black;
-  
+  //  fill: var(--main-bgc);
+  fill: black;
 }
 .mobile-menu__icon-burger {
- fill: var(--accent-color);
-
-  
+  fill: var(--accent-color);
 }
 .mobile-menu .mobile-menu__switch--close {
   display: none;
-  
 }
 
-.mobile-menu--is-open  .mobile-menu__switch--close {
+.mobile-menu--is-open .mobile-menu__switch--close {
   display: block;
   position: absolute;
   top: 28px;
@@ -347,49 +331,41 @@ fill: black;
 //   fill: var(--accent-color);
 // }
 
-
-
-
 // ===========навигация сайта=========
 
-
 .site-nav {
-   @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     position: static;
     display: flex;
-   }
+  }
 }
-
 
 .site-nav__list {
   @media screen and (min-width: $desktop) {
     display: flex;
-     } 
+  }
 
-   &:first-child {
+  &:first-child {
     border-top: 1px solid #e18298;
 
     @media screen and (min-width: $desktop) {
       border-color: transparent;
-       }}
- 
- 
+    }
+  }
 }
 .site-nav__item {
   border-bottom: 1px solid #e18298;
 
   @media screen and (min-width: $desktop) {
     border-color: transparent;
-   
-     }
+  }
 }
-
 
 .site-nav__item:not(:last-child) {
   @media screen and (min-width: $desktop) {
-  margin-right: 35px;
-}}
-
+    margin-right: 35px;
+  }
+}
 
 .site-nav__link {
   padding: 12px 0;
@@ -410,8 +386,6 @@ fill: black;
   @media screen and (min-width: $desktop) {
     font-weight: 700;
     font-size: 16px;
-  
-   }
- 
+  }
 }
 // --accent-color: #d41443;====================

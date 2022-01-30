@@ -13,128 +13,105 @@
 в связи с этим у таблетной и десктопной версии ==background-color: transparent==
 для того чтобы было видно фоновое изображение от hero  -->
 
-
 <div class="hero">
   <div class="container">
-    
-    
-    
     <header class="header">
-      <div    class="header__container">
-
-      <!-- =========лого========== -->
-      <span class="logo">
-        <img
-              class="logo__image"
-              srcset="./images/Header/ice-cream/logo.png      1x, 
-                      ./images/Header/ice-cream/logo@2x.png   2x"
-                 src="./images/Header/ice-cream/logo.png"
-              alt="ice cream cone"
+      <div class="header__container">
+        <!-- =========лого========== -->
+        <span class="logo">
+          <img
+            class="logo__image"
+            srcset="./images/Header/ice-cream/logo.png 1x, ./images/Header/ice-cream/logo@2x.png 2x"
+            src="./images/Header/ice-cream/logo.png"
+            alt="ice cream cone"
           />
-        icecream
-      </span>
+          icecream
+        </span>
 
-     
- <!-- кнопка перключатель мобильного меню открытие -->
- <button type="button" 
- class="mobile-menu__switch mobile-menu__switch--open mobile-menu__open--js"
- aria-expanded
- >
- <svg
-   class="mobile-menu__svg"
-   width="32"
-   height="32"
-   aria-label="Переключатель мобильного меню"
- >
- <use class="mobile-menu__icon-burger" 
-     href="./images/symbol-defs.svg#icon-burger"
- >
- </use>
-   
- </svg>
- </button>
-<!-- кнопка перключатель мобильного меню открытие end -->
-     
+        <!-- кнопка перключатель мобильного меню открытие -->
+        <button
+          type="button"
+          class="mobile-menu__switch mobile-menu__switch--open mobile-menu__open--js"
+          aria-expanded
+        >
+          <svg
+            class="mobile-menu__svg"
+            width="32"
+            height="32"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="mobile-menu__icon-burger" href="./images/symbol-defs.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <!-- кнопка перключатель мобильного меню открытие end -->
 
         <!-- ===кнопка купить для хедера=== -->
-        <button type="button" 
-                class="button button--white header__button">
+        <button type="button" class="button button--white header__button">
           <span class="button__buy">Buy now </span>
         </button>
         <!-- кнопка купить для хедера end -->
-<!-- 
+        <!-- 
        <div class="backdrop backdrop--is-hidden"
            data-modal> -->
-     
-         
-        <div class="mobile-menu mobile-menu--js" >
-         <div class="mobile-menu__box">
 
-
-          
-
-          <!-- ========кнопка перключатель мобильного меню закрытие== -->
-          <button type="button" 
-                  class="mobile-menu__switch mobile-menu__switch--close mobile-menu__close--js"
-                  data-modal-close
-          ><svg
+        <div class="mobile-menu mobile-menu--js">
+          <div class="mobile-menu__box">
+            <!-- ========кнопка перключатель мобильного меню закрытие== -->
+            <button
+              type="button"
+              class="mobile-menu__switch mobile-menu__switch--close mobile-menu__close--js"
+              data-modal-close
+            >
+              <svg
                 class="mobile-menu__svg"
                 width="34"
                 height="34"
                 aria-label="Переключатель мобильного меню"
               >
-              <use  class="mobile-menu__icon-cross" 
-                    href="./images/symbol-defs.svg#icon-close"
-              ></use>
-            </svg>
-          </button>
-          <!-- ===кнопка перключатель мобильного меню закрытие end -->
+                <use
+                  class="mobile-menu__icon-cross"
+                  href="./images/symbol-defs.svg#icon-close"
+                ></use>
+              </svg>
+            </button>
+            <!-- ===кнопка перключатель мобильного меню закрытие end -->
 
+            <!-- кнопка модального окна buy-now -->
+            <button type="button" class="button button--white mobile-menu__button">
+              <span class="button__buy">Buy now </span>
+            </button>
+            <!-- кнопка модального окна buy-now end-->
 
-          <!-- кнопка модального окна buy-now -->
-          <button type="button"
-                  class="button button--white mobile-menu__button">
-            <span class="button__buy">Buy now </span>
-          </button>
-       <!-- кнопка модального окна buy-now end-->   
-
-                  <!-- ====навигация сайта =========== -->
-                  <!-- якоря расставлены на заголовки соответствующих 
+            <!-- ====навигация сайта =========== -->
+            <!-- якоря расставлены на заголовки соответствующих 
                   секций, даже если они скрыты -->
-          <nav class="site-nav">
-
-            <ul   class="site-nav__list">
-              <li class="site-nav__item">
-                <a href="#" 
-                  class="site-nav__link ">Home </a>
-              </li>
-              <li class="site-nav__item">
-                <a href="#about-us" 
-                  class="site-nav__link">About us </a>
-              </li>
-              <li class="site-nav__item">
-                <a href="#how-it-made" 
-                  class="site-nav__link">How it’s made? </a>
-              </li>
-              <li class="site-nav__item">
-                <a href="#our-products" 
-                  class="site-nav__link">Our products </a>
-              </li>
-              <li class="site-nav__item">
-                <a href="#contact" 
-                  class="site-nav__link">Contact </a>
-              </li>
-            </ul>
-          </nav>
-          <!-- ..... ====навигация сайта end======= ... -->
-        </div>
+            <nav class="site-nav">
+              <ul class="site-nav__list">
+                <li class="site-nav__item">
+                  <a href="#" class="site-nav__link">Home </a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="#about-us" class="site-nav__link">About us </a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="#how-it-made" class="site-nav__link">How it’s made? </a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="#our-products" class="site-nav__link">Our products </a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="#contact" class="site-nav__link">Contact </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- ..... ====навигация сайта end======= ... -->
+          </div>
         </div>
 
-            <!-- ======================================= -->
+        <!-- ======================================= -->
       </div>
       <!-- </div> -->
     </header>
   </div>
 </div>
 <!-- ====================== -->
-
