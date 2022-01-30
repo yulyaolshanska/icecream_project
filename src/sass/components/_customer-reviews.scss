@@ -19,7 +19,11 @@
   }
 
   & .swiper-pagination-bullet-active {
-    background-image: url('../images/сustomer-reviews/home.svg');
+    background-image: url('../images/сustomer-reviews/home1.svg');
+    background-color: transparent;
+    border-radius: 0;
+    width: 13px;
+    height: 12px;
   }
 }
 
