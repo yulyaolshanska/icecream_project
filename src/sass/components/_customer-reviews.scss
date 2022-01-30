@@ -8,6 +8,19 @@
 .swiper {
   // width: 926px;
   height: 350px;
+  & .swiper-pagination-bullets {
+    bottom: 0;
+  }
+
+  & .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    background: var(--slider-item-color);
+  }
+
+  & .swiper-pagination-bullet-active {
+    background-image: url('../images/сustomer-reviews/home.svg');
+  }
 }
 
 .slider__slide {
