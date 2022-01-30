@@ -1,11 +1,36 @@
+.reviews__container {
+  min-width: 0;
+}
 .slider {
   text-align: center;
 }
 
-.slider__item {
+.swiper {
+  // width: 926px;
+  height: 350px;
+  & .swiper-pagination-bullets {
+    bottom: 0;
+  }
+
+  & .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    background: var(--slider-item-color);
+  }
+
+  & .swiper-pagination-bullet-active {
+    background-image: url('../images/сustomer-reviews/home1.svg');
+    background-color: transparent;
+    border-radius: 0;
+    width: 13px;
+    height: 12px;
+  }
+}
+
+.slider__slide {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto;
+  // max-width: 900px;
+  // margin: 0 auto;
 
   &::before {
     content: '';
@@ -21,8 +46,9 @@
 
 .slider__foto {
   margin: 0 auto;
-  width: 85px;
-  height: 85px;
+  max-width: 100%;
+  // width: 85px;
+  // height: 85px;
   margin-bottom: 29px;
 
   @media screen and (min-width: $tablet) {
