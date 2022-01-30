@@ -136,9 +136,6 @@
     line-height: 1.86;
   }
   @media screen and (min-width: $desktop) {
-    font-size: 16px;
-    line-height: 1.86;
-
     letter-spacing: 0.02em;
   }
 }
@@ -146,7 +143,7 @@
 .footer__block {
   position: relative;
   text-align: center;
-  &::after {
+  &::before {
     content: '';
     position: absolute;
     top: -22px;
