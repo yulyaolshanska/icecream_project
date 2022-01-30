@@ -1,5 +1,11 @@
+// .hero {
+//   position: relative;
+// }
+
+
 .header {
   background-color: transparent;
+  position: relative;
 }
 
 .header__container {
@@ -19,31 +25,246 @@
 .logo__image {
   margin-right: 18px;
 }
-.mobile-menu {
-  background-color: var(--mobile-menu-bgc);
+
+
+// оверлей
+
+// .overlay {
+//   margin-left: auto;
+//   margin-right: auto;
+
+ 
+//   background-image: linear-gradient(
+//       to right,
+//       rgba(47, 48, 58, 0.4),
+//       rgba(47, 48, 58, 0.4)
+//     ),
+//     url(../images/About/about-background-desktop.png);
+//   background-position: center;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+
+//   @media screen and (min-device-pixel-ratio: 2),
+//     screen and (min-resolution: 192dpi),
+//     screen and (min-resolution: 2dppx) {
+//     background-image: linear-gradient(
+//         to right,
+//         rgba(47, 48, 58, 0.4),
+//         rgba(47, 48, 58, 0.4)
+//       ),
+//       url(../images/About/about-background-desktop@2x.png);
+//     background-position: center;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     background-image: linear-gradient(
+//         to right,
+//         rgba(47, 48, 58, 0.4),
+//         rgba(47, 48, 58, 0.4)
+//       ),
+//       url(../images/About/about-background-desktop.png);
+//     background-position: center;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+
+//     @media screen and (min-device-pixel-ratio: 2),
+//       screen and (min-resolution: 192dpi),
+//       screen and (min-resolution: 2dppx) {
+//       background-image: linear-gradient(
+//           to right,
+//           rgba(47, 48, 58, 0.4),
+//           rgba(47, 48, 58, 0.4)
+//         ),
+//         url(../images/About/about-background-desktop@2x.png);
+//       background-position: center;
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//     }
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     background-image: linear-gradient(
+//         to right,
+//         rgba(47, 48, 58, 0.4),
+//         rgba(47, 48, 58, 0.4)
+//       ),
+//       url(../images/About/about-background-mobile.png);
+//     background-position: center;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+
+//     @media screen and (min-device-pixel-ratio: 2),
+//       screen and (min-resolution: 192dpi),
+//       screen and (min-resolution: 2dppx) {
+//       background-image: linear-gradient(
+//           to right,
+//           rgba(47, 48, 58, 0.4),
+//           rgba(47, 48, 58, 0.4)
+//         ),
+//         url(../images/About/about-background-mobile@2x.png);
+//       background-position: center;
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//     }
+//   }
+// }
+
+.backdrop {
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+
+  overflow-y: scroll;
+
+   
+  background-image: linear-gradient(
+    to right,
+    rgba(238, 174, 202, 0.8) ,
+    rgba(178, 181, 184, 0.6)     
+  );
+
+  opacity: 1;
+  visibility: visible;
+
+  transition: visibility 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    // position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    
+   
+  }
+
+  // @media screen and (max-width: 767px) {
+  //   padding: 15px 15px;
+  // }
+
+ 
 }
+
+
+// мобильное меню
+
+
+.mobile-menu {
+  // display: none;
+  background-color: var(--mobile-menu-bgc);
+  position: fixed;
+  top:    0;
+  right:  0;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+
+  @media screen and (min-width: 320px) {
+    width: 250px;
+    padding: 48px 20px;
+
+    // transform: translatex(100%);
+    } 
+    
+     @media screen and (min-width: $tablet) {
+      width: 254px;
+      padding: 48px 24px;
+      top: 48px;
+      right: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      display: none;
+     
+      }
+
+  &--open {
+    overflow: hidden;
+    position: absolute;
+    top:    0;
+    right:  0;
+
+    display: block;
+    padding: 48px 15px;
+
+    width:  100%;
+    height: 100vh;
+    // transform: translatex(100%);
+
+
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 320px) {
+      width: 250px;
+      padding: 48px 20px;
+    }
+  
+
+  }
+ 
+}
+
+body.mobile-menu--open {
+  overflow: hidden;
+}
+
+.mobile-menu--open {
+  @media screen and (min-width: $desktop) {
+  display: none;
+ 
+  }
+}
+@media screen and (min-width: $desktop) {
+  .site-nav {
+    display: block;
+  }
+ 
+  }
+
 
 .mobile-menu__box {
-  padding: 40px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0;
 
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
-  }
+  // @media screen and (min-width: $mobile) {
+  //   width: $mobile;
+  // }
+
+  // @media screen and (min-width: $tablet) {
+  //   width: $tablet;
+  // }
+
+  // @media screen and (min-width: $desktop) {
+  //   width: $desktop;
+  // }
+}
+
+// кнопка купить для хедера
+.header__button {
+  display: none;
+  margin-right: 0;
+  margin-left: 30px;
 
   @media screen and (min-width: $tablet) {
-    width: $tablet;
+    display: block;
   }
-
   @media screen and (min-width: $desktop) {
-    width: $desktop;
+    margin-left: auto;
   }
 }
-.mobile-menu__switch {
-  margin-left: auto;
-  padding: 0;
-  background-color: transparent;
-  border: transparent 1px solid;
-}
+//  кнопка купить для хедера end
+
+
 .mobile-menu__button {
   margin-left: auto;
   margin-right: auto;
@@ -51,14 +272,97 @@
   margin-bottom: 20px;
   width: 100%;
 
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: 320px) {
     width: 209px;
   }
 
   @media screen and (min-width: $tablet) {
     width: 186px;
+    display: block;
   }
+
+ 
 }
+
+
+// переключатель мобильного меню
+
+.mobile-menu__switch {
+  padding: 0;
+  background-color: transparent;
+  border: transparent 1px solid;
+}
+
+.mobile-menu__switch--open {
+  margin-left: auto;
+}
+
+.mobile-menu__switch--close {
+  position: fixed;
+  right: 28px;
+  top: 23px;
+ 
+  
+}
+@media screen and (min-width: $desktop) {
+  .mobile-menu__switch--open {
+  display: none;}
+  
+}
+
+
+.mobile-menu--open .mobile-menu__svg{
+  position: fixed;
+  top: 23px;
+  right: 28px;
+}
+
+.mobile-menu__icon-cross {
+//  fill: var(--main-bgc);
+  fill: black;
+}
+.mobile-menu__icon-burger {
+ fill: var(--accent-color);
+
+  // display: none;
+}
+.mobile-menu__switch .mobile-menu__icon-cross {
+  // display: none;
+  color: orange;
+}
+
+// .mobile-menu__button:hover .mobile-menu__icon-cross,
+// .mobile-menu__button:focus .mobile-menu__icon-cross {
+//   fill: var(--accent-color);
+// }
+
+.mobile-menu__switch.is-open .mobile-menu__icon-cross {
+  display: block;
+  z-index: 2;
+  
+}
+
+.mobile-menu__switch .mobile-menu__icon-burger {
+  display: block;
+
+  // stroke: black;
+}
+
+// .mobile-menu__switch.is-open .mobile-menu__icon-burger {
+//   display: none;
+// }
+
+
+// ===========навигация сайта=========
+
+
+.site-nav {
+   @media screen and (min-width: $desktop) {
+    position: static;
+    display: flex;
+   }
+}
+
 
 .site-nav__list {
   &:first-child {
@@ -70,7 +374,7 @@
   // outline: green solid 1px;
 }
 .site-nav__link {
-  padding: 12px;
+  padding: 12px 0;
   //   background-color: var(--mobile-menu-bgc);
 
   color: var(--main-bgc);
@@ -78,8 +382,18 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.3;
-  &--current {
+
+  &:active,
+  &:hover,
+  &:focus {
     color: var(--accent-color);
   }
+
+  @media screen and (min-width: $desktop) {
+    font-weight: 700;
+    font-size: 16px;
+  
+   }
+ 
 }
 // --accent-color: #d41443;====================
