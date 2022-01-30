@@ -1,33 +1,22 @@
-@media screen and (min-width: $mobile) {
-}
-
 .hero {
-  background-color: #ffb8ca;
+  background-color: var(--brand-color);
 }
 .hero__block {
-  // min-width: 320px;
-  // max-width: 480px;
   position: relative;
 
-  background-image: url(/images/Hero/Ellipse-mob.png);
+  background-image: url(/images/Hero/ellipse-mob.png);
   background-repeat: no-repeat;
   background-position: right;
   @media screen and (min-width: $tablet) {
-    // min-width: 768px;
-    // max-width: 1200px;
-    background-image: url(/images/Hero/Ellipse-tab.png);
+    background-image: url(/images/Hero/ellipse-tab.png);
     background-position: center right 35%;
   }
   @media screen and (min-width: $desktop) {
-    // min-width: 1280px;
-    // max-width: 1200px;
-    background-image: url(/images/Hero/Ellipse.png);
+    background-image: url(/images/Hero/ellipse.png);
     background-position: center right 35%;
   }
-  
 }
 .hero__titel {
-  font-weight: normal;
   font-family: Titan One;
   position: relative;
   z-index: 25;
@@ -35,7 +24,7 @@
   flex-direction: column;
   padding-left: 20px;
   padding-top: 137px;
-  color: #d41443;
+  color: var(--accent-color);
 
   font-size: 48px;
   line-height: 55px;
@@ -47,7 +36,7 @@
   }
 }
 .hero___titel--white {
-  color: #ffff;
+  color: var(--main-bgc);
   text-transform: lowercase;
   font-size: 26px;
   line-height: 30px;
@@ -64,27 +53,27 @@
 .hero__button {
   padding: 8px 20px;
   display: flex;
-  font-family: DM Sans;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid #d41443;
+  border: 1px solid var(--accent-color);
   border-radius: 50px;
   margin-bottom: 160px;
   font-size: 8px;
   line-height: 10px;
-
-  background-color: #d41443;
-  color: #ffffff;
-  margin-right: 10px;
+  background-color: var(--accent-color);
+  color: var(--main-bgc);
+  &:not(last-child){
+    margin-right: 10px;
+  };
   @media screen and (min-width: $tablet) {
-    margin-bottom: 19px;
+    margin-bottom: 173px;
   }
 }
 .hero__button--white {
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: #d41443;
+  border: 1px solid var(--main-bgc);
+  background-color: var(--main-bgc);
+  color: var(--accent-color);
 }
 .hero__button-block {
   display: flex;
@@ -112,21 +101,18 @@
   display: none;
   @media screen and (min-width: $tablet) {
     display: flex;
+    position: absolute;
     align-items: center;
     justify-content: center;
-    padding-bottom: 28px;
-    margin-left: -418px;
+    bottom: 28px;
   }
 }
 .herro__text-milk {
   @media screen and (min-width: $tablet) {
     width: 114px;
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 8px;
     line-height: 150%;
-    color: #ffffff;
+    color: var(--main-bgc);
   }
 }
 .hero__box {
@@ -141,7 +127,7 @@
 .hero__item {
   @media screen and (min-width: $tablet) {
     margin-bottom: 14px;
-    background-image: url(/images/Hero/Ellipse-white.png);
+    background-image: url(/images/Hero/ellipse-white.png);
     background-repeat: no-repeat;
     background-position: right top;
   }
@@ -149,21 +135,16 @@
 .hero__num {
   @media screen and (min-width: $tablet) {
     font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
     font-size: 28px;
     line-height: 32px;
     text-align: right;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #d41443;
+    color: var(--accent-color);
   }
 }
 .hero__cofes {
   @media screen and (min-width: $tablet) {
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 8px;
     line-height: 10px;
     text-align: -webkit-center;
