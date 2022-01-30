@@ -26,16 +26,20 @@
   @media screen and (max-width: $mobile-only) {
     padding-bottom: 80px;
   }
+
   @media screen and (min-width: $tablet) {
     padding-bottom: 110px;
   }
+
   @media screen and (min-width: $desktop) {
     padding-bottom: 130px;
   }
 }
+
 .section--pink-background {
   background-color: rgba(255, 245, 246, 1);
 }
+
 .section__title {
   color: var(--accent-color);
   font-family: 'Titan One', sans-serif;
@@ -47,6 +51,7 @@
   @media screen and (min-width: $tablet) {
     font-size: 48px;
   }
+
   @media screen and (min-width: $desktop) {
     font-size: 58px;
     line-height: 1.14;
@@ -64,6 +69,7 @@
     overflow: hidden;
   }
 }
+
 .section__label {
   font-family: Titan One;
   font-size: 18px;
@@ -71,9 +77,11 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--dark-brand-color);
+
   @media screen and (min-width: $tablet) {
     font-size: 26px;
   }
+
   @media screen and (min-width: $desktop) {
     font-size: 30px;
     line-height: 1.13;
