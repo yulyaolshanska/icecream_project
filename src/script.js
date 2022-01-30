@@ -3,6 +3,8 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
 
         clickable: true,
+        
+        loop: true,
     }
 
 
