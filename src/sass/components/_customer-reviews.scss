@@ -1,0 +1,224 @@
+.reviews__container {
+  min-width: 0;
+}
+.slider {
+  text-align: center;
+}
+
+.swiper {
+  // width: 926px;
+  height: 350px;
+  & .swiper-pagination-bullets {
+    bottom: 0;
+  }
+
+  & .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    background: var(--slider-item-color);
+  }
+
+  & .swiper-pagination-bullet-active {
+    background-image: url('../images/сustomer-reviews/home1.svg');
+    background-color: transparent;
+    border-radius: 0;
+    width: 13px;
+    height: 12px;
+  }
+}
+
+.slider__slide {
+  position: relative;
+  // max-width: 900px;
+  // margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 140px;
+    left: 40px;
+    width: 54px;
+    height: 40px;
+    z-index: 1;
+    background-image: url('../images/сustomer-reviews/quote.svg');
+  }
+}
+
+.slider__foto {
+  margin: 0 auto;
+  max-width: 100%;
+  // width: 85px;
+  // height: 85px;
+  margin-bottom: 29px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 19px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 15px;
+  }
+}
+
+.slider__thumb {
+  background-color: #fafafa;
+  padding: 43px 61px 22px 61px;
+  margin-bottom: 52px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 42px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 34px;
+  }
+}
+
+.slider__description {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  padding-bottom: 4px;
+  background-position: 0px -4px;
+  background-image: -webkit-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 30px,
+    #e1e1e1 30px,
+    #e1e1e1 31px
+  );
+  background-image: -moz-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 31px,
+    #e1e1e1 31px,
+    #e1e1e1 32px
+  );
+  background-image: -ms-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 31px,
+    #e1e1e1 31px,
+    #e1e1e1 32px
+  );
+  background-image: -o-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 31px,
+    #e1e1e1 31px,
+    #e1e1e1 32px
+  );
+  background-image: repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 31px,
+    #e1e1e1 31px,
+    #e1e1e1 32px
+  );
+
+  @include text(500, 12px, 2.55, 0, var(--main-text-color));
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    background-image: -webkit-repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 34px,
+      #e1e1e1 34px,
+      #e1e1e1 35px
+    );
+    background-image: -moz-repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 34px,
+      #e1e1e1 34px,
+      #e1e1e1 35px
+    );
+    background-image: -ms-repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 34px,
+      #e1e1e1 34px,
+      #e1e1e1 35px
+    );
+    background-image: -o-repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 34px,
+      #e1e1e1 34px,
+      #e1e1e1 35px
+    );
+    background-image: repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 34px,
+      #e1e1e1 34px,
+      #e1e1e1 35px
+    );
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    padding-bottom: 5px;
+    background-position: -1px;
+    background-image: -webkit-repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 37px,
+      #e1e1e1 37px,
+      #e1e1e1 38px
+    );
+    background-image: -moz-repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 37px,
+      #e1e1e1 37px,
+      #e1e1e1 38px
+    );
+    background-image: -ms-repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 37x,
+      #e1e1e1 37px,
+      #e1e1e1 38px
+    );
+    background-image: -o-repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 37px,
+      #e1e1e1 37px,
+      #e1e1e1 38px
+    );
+    background-image: repeating-linear-gradient(
+      top,
+      transparent 0px,
+      transparent 37px,
+      #e1e1e1 37px,
+      #e1e1e1 38px
+    );
+  }
+}
+
+.slider__name {
+  @include text(500, 14px, 1.86, 0, var(--main-text-color));
+  position: relative;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+  }
+
+  &::before {
+    content: '';
+    background-image: url('../images/сustomer-reviews/dots.svg');
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 4px;
+  }
+}
