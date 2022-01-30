@@ -1,24 +1,24 @@
 .container {
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   @media screen and (min-width: $mobile) {
     width: $mobile;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   @media screen and (min-width: $tablet) {
     width: $tablet;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 34px;
+    padding-right: 34px;
   }
 
   @media screen and (min-width: $desktop) {
-    width: $desktop;
-    padding-left: 115px;
-    padding-right: 115px;
+    width: 1080px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -26,12 +26,18 @@
   @media screen and (max-width: $mobile-only) {
     padding-bottom: 80px;
   }
+
   @media screen and (min-width: $tablet) {
     padding-bottom: 110px;
   }
+
   @media screen and (min-width: $desktop) {
     padding-bottom: 130px;
   }
+}
+
+.section--pink-background {
+  background-color: rgba(255, 245, 246, 1);
 }
 
 .section__title {
@@ -40,12 +46,12 @@
   font-size: 34px;
   line-height: 1.15;
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
 
   @media screen and (min-width: $tablet) {
     font-size: 48px;
   }
+
   @media screen and (min-width: $desktop) {
     font-size: 58px;
     line-height: 1.14;
@@ -63,20 +69,21 @@
     overflow: hidden;
   }
 }
+
 .section__label {
-  margin-bottom: 15px;
   font-family: Titan One;
   font-size: 18px;
   line-height: 1.16;
   text-align: center;
   text-transform: uppercase;
   color: var(--dark-brand-color);
+
   @media screen and (min-width: $tablet) {
     font-size: 26px;
   }
+
   @media screen and (min-width: $desktop) {
     font-size: 30px;
     line-height: 1.13;
-    letter-spacing: 0.04em;
   }
 }
