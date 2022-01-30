@@ -35,26 +35,26 @@
       </span>
 
      
-
-      <!-- кнопка перключатель мобильного меню -->
-      <button type="button" 
-              class="mobile-menu__switch mobile-menu__switch--open "
-              data-modal-open
-      >
-        <svg
-          class="mobile-menu__svg"
-          width="32"
-          height="32"
-          aria-label="Переключатель мобильного меню"
-        >
-        <use class="mobile-menu__icon-burger" 
-             href="./images/symbol-defs.svg#icon-burger"
-        >
-        </use>
-          
-        </svg>
-      </button>
-      <!-- кнопка перключатель мобильного меню end -->
+ <!-- кнопка перключатель мобильного меню открытие -->
+ <button type="button" 
+ class="mobile-menu__switch mobile-menu__switch--open mobile-menu__open--js"
+ aria-expanded
+ >
+ <svg
+   class="mobile-menu__svg"
+   width="32"
+   height="32"
+   aria-label="Переключатель мобильного меню"
+ >
+ <use class="mobile-menu__icon-burger" 
+     href="./images/symbol-defs.svg#icon-burger"
+ >
+ </use>
+   
+ </svg>
+ </button>
+<!-- кнопка перключатель мобильного меню открытие end -->
+     
 
         <!-- ===кнопка купить для хедера=== -->
         <button type="button" 
@@ -62,19 +62,22 @@
           <span class="button__buy">Buy now </span>
         </button>
         <!-- кнопка купить для хедера end -->
-
+<!-- 
        <div class="backdrop backdrop--is-hidden"
-           data-modal>
+           data-modal> -->
      
          
-        <div class="mobile-menu " >
+        <div class="mobile-menu mobile-menu--js" >
          <div class="mobile-menu__box">
 
+
+          
+
+          <!-- ========кнопка перключатель мобильного меню закрытие== -->
           <button type="button" 
-                  class="mobile-menu__switch mobile-menu__switch--close "
+                  class="mobile-menu__switch mobile-menu__switch--close mobile-menu__close--js"
                   data-modal-close
-          >
-            <svg
+          ><svg
                 class="mobile-menu__svg"
                 width="34"
                 height="34"
@@ -83,9 +86,11 @@
               <use  class="mobile-menu__icon-cross" 
                     href="./images/symbol-defs.svg#icon-close"
               ></use>
-
             </svg>
           </button>
+          <!-- ===кнопка перключатель мобильного меню закрытие end -->
+
+
           <!-- кнопка модального окна buy-now -->
           <button type="button"
                   class="button button--white mobile-menu__button">
@@ -127,7 +132,7 @@
 
             <!-- ======================================= -->
       </div>
-      </div>
+      <!-- </div> -->
     </header>
   </div>
 </div>
