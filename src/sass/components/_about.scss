@@ -5,8 +5,7 @@
       background-repeat: no-repeat;
       background-position: 50% 90%;
 
- 
-     @media screen and (min-device-pixel-ratio: 2),
+      @media screen and (min-device-pixel-ratio: 2),
        (min-resolution: 192dpi),
        (min-resolution: 2dppx) {
         background-image: url('../images/About/about-background-mobile@2x.png');
@@ -38,6 +37,18 @@
          background-size: auto;
 
        }
+
+         @media screen and (max-width: $mobile-only) {
+           padding-top: 80px;
+         }
+
+         @media screen and (min-width: $tablet) {
+           padding-top: 110px;
+         }
+
+         @media screen and (min-width: $desktop) {
+           padding-top: 130px;
+         }
 
  }
 
