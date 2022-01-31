@@ -1,0 +1,53 @@
+<div class="contact_modal__backdrop visually-hidden" data-contact-modal>
+  <div class="contact-modal">
+    <button class="modal-button__close" data-contact-modal-close>
+      <svg class="modal-button__icon">
+        <use href="./images/symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+    <b class="contact-modal__title section__title">Our Location</b>
+
+    <!-- добавить адапитв рисунка -->
+    <picture class="contact-modal__img">
+      <source
+        srcset="./images/Hero/hero-girl-desktop.png 1x, ./images/Hero/hero-girl-desktop@2x.png 2x"
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="./images/Hero/hero-girl-tablet.png 1x, ./images/Hero/hero-girl-tablet@2x.png 2x"
+        media="(min-width: 768px)"
+      />
+
+      <img src="./images/Hero/hero-girl-tablet.png" alt="girl with icecream" />
+    </picture>
+
+    <div class="contact-modal__frame">
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1GjoIbMz_y6WZ2c9CCroh4yJi62FcQs4F&ehbc=2E312F"
+        class="contact-modal__map"
+      ></iframe>
+
+      <div class="modal-box">
+        <ul class="modal-box__list">
+          <li class="modal-box__item">
+            <span class="modal-box__num">23</span>
+            <p class="modal-box__coffes">food trucks</p>
+          </li>
+          <li class="modal-box__item">
+            <span class="modal-box__num">16</span>
+            <p class="modal-box__coffes">cafes</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-modal__button-box">
+      <a href="./" class="contact-modal__link">
+        <button class="button button--white contact-modal__button">Home</button></a
+      >
+      <a href="#" class="contact-modal__link"
+        ><button class="button button--pink contact-modal__button">Franchise</button></a
+      >
+    </div>
+  </div>
+</div>

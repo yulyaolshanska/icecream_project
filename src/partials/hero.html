@@ -1,4 +1,4 @@
-<!-- <section class="hero">
+<section class="hero">
   <div class="hero__block container">
     <h1 class="setion__titel animate__animated animate__backInLeft">
       <span class="hero___titel--white"
@@ -11,42 +11,48 @@
       <a href="#" class="hero__button"> Products </a>
       <a href="#" class="hero__button hero__button--white"> How its made? </a>
     </div>
-    <picture class="animate__animated animate__jello animate__delay-1s">
+    <picture>
+      <source
+        srcset="
+          ./images/Hero/hero-icecream-desktop.webp    1x,
+          ./images/Hero/hero-icecream-desktop@2x.webp 2x
+        "
+        media="(min-width:1280px)"
+      />
+      <source
+        srcset="
+          ./images/Hero/hero-icecream-tablet.png     1x,
+          ./images/Hero/hero-icecream-tablet@2x.webp 2x
+        "
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="
+          ./images/Hero/hero-icecream-mobile.png     1x,
+          ./images/Hero/hero-icecream-mobile@2x.webp 2x
+        "
+        media="(min-width:320px)"
+      />
       <img
         class="hero__ice-cream animate__animated animate__tada animate__delay-1s"
-        src="./images/Hero/hero-icecream-mobile.png"
-        srcset="./images/Hero/hero-icecream-mobile.png 1x, ./images/Hero/hero-icecream-mobile@2x.png 2x"
-        alt="icon ice-cream"
-      />
-      <img
-        class="hero__ice-cream--tab animate__animated animate__tada animate__delay-1s"
-        srcset="./images/Hero/hero-icecream-tablet.png 1x, ./images/Hero/hero-icecream-tablet@2x.png 2x"
-        src="/images/Hero/hero-icecream-tablet.png"
-        alt="icon ice-cream"
-      />
-      <img
-        class="hero__ice-cream--desc animate__animated animate__tada animate__delay-1s"
-        src="/images/Hero/hero-icecream-desktop.png"
-        srcset="
-        /images/Hero/hero-icecream-desktop.png         1x,
-          ./images/Hero/hero-icecream-desktop@2x.png 2x
-        "
+        src="./images/Hero/hero-icecream-tablet.png"
         alt="icon ice-cream"
       />
     </picture>
     <div class="hero__milk">
       <picture>
-        <img
-          class="herro__icon-milk animate__animated animate__backInLeft animate__delay-2s"
-          src="/images/Hero/hero-milk-tablet.png"
+        <source
+          srcset="./images/Hero/hero-milk-desktop.png 1x, ./images/Hero/hero-milk-desktop@2x.png 2x"
+          media="(min-width:1280px)"
+        />
+        <source
           srcset="./images/Hero/hero-milk-tablet.png 1x, ./images/Hero/hero-milk-tablet@2x.png 2x"
-          alt="icon milk"
+          media="(min-width:768px)"
         />
         <img
-          class="herro__icon-milk--desc animate__animated animate__backInLeft animate__delay-2s"
-          src="/images/Hero/hero-milk-desktop.png"
+          class="herro__icon-milk animate__animated animate__backInLeft animate__delay-2s"
+          src="./images/Hero/hero-milk-tablet.png"
           alt="icon milk"
-          srcset="./images/Hero/hero-milk-desktop.png 1x, ./images/Hero/hero-milk-desktop@2x.png 2x"
         />
       </picture>
       <p class="herro__text-milk">
@@ -68,18 +74,19 @@
       </ul>
     </div>
     <picture>
-      <img
-        class="hero__tasty animate__animated animate__fadeInRight animate__delay-1s"
-        src="/images/Hero/hero-girl-tablet.png "
+      <source
+        srcset="./images/Hero/hero-girl-desktop.png 1x, ./images/Hero/hero-girl-desktop@2x.png 2x"
+        media="(min-width:1280px)"
+      />
+      <source
         srcset="./images/Hero/hero-girl-tablet.png 1x, ./images/Hero/hero-girl-tablet@2x.png 2x"
-        alt="gerl with milk"
+        media="(min-width:768px)"
       />
       <img
-        class="hero__tasty--desc animate__animated animate__fadeInRight animate__delay-1s"
-        src="/images/Hero/hero-girl-desktop.png"
-        srcset="./images/Hero/hero-girl-desktop.png 1x, ./images/Hero/hero-girl-desktop@2x.png 2x"
+        class="hero__tasty animate__animated animate__heartBeat animate__delay-1s"
+        src="./images/Hero/hero-girl-tablet.png "
         alt="gerl with milk"
       />
     </picture>
   </div>
-</section> -->
+</section>
