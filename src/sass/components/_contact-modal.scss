@@ -88,7 +88,7 @@
   height: 133px;
   z-index: -1;
 
-  &::before {
+  &::after {
     content: '';
     background-image: url('../images/Contacts/ellipse.svg');
 
@@ -107,6 +107,7 @@
 }
 
 .contact-modal__frame {
+  position: relative;
   width: 100%;
   max-width: 500px;
   margin: 48px auto;
@@ -121,8 +122,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    width: 904px;
-    // height: 706px;
+    max-width: 700px;
   }
 }
 
@@ -148,9 +148,41 @@
 }
 .modal-box__list {
   display: flex;
+  position: absolute;
+  top: 3px;
+  left: -130px;
+}
+
+.modal-box__item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 124px;
+  &:not(:last-child) {
+  }
 }
 
 .modal-box__num {
+  font-family: Titan One;
+  @include text(400, 46px, 0.8, 0.04em, var(--accent-color));
+  z-index: 1;
+
+  &::after {
+    content: '';
+    background-image: url('../images/Hero/Ellipse-white.png');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -2px;
+    right: 45px;
+    z-index: -1;
+  }
+}
+
+.modal-box__coffes {
+  @include text(400, 14px, 1.23, 0, var(--accent-color));
+  padding-left: 20px;
 }
 
 .contact-modal__button-box {
