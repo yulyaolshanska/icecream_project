@@ -1,37 +1,39 @@
-
 .header {
   background-color: transparent;
-  position: relative;
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  padding-top: 6px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 37px;
+  }
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (min-width: $desktop) {
-  }
 }
 
 .logo {
+  display: inline-flex;
+}
+
+.logo__text {
   display: flex;
   align-items: center;
 
   font-family: 'Titan One', sans-serif;
-  font-size: 25px;
-  line-height: 1.16;
+  @include text(400, 25px, 1.16, 0, var(--accent-color));
   text-transform: uppercase;
-  letter-spacing: 0;
 }
 .logo__image {
   margin-right: 18px;
 }
 
-
-
 // мобильное меню
 
 .mobile-menu {
-  
   position: fixed;
   top: 0;
   right: 0;
@@ -41,16 +43,15 @@
   height: 100vh;
   width: 100%;
 
-  visibility:hidden;
+  visibility: hidden;
   transform: translateX(100%);
   transition: 0.5s;
-   
+
   background-color: var(--mobile-menu-bgc);
 
   @media screen and (min-width: 320px) {
     width: 250px;
     padding: 48px 20px;
-
   }
 
   @media screen and (min-width: $tablet) {
@@ -60,11 +61,10 @@
     right: 0;
   }
   @media screen and (min-width: $desktop) {
-    display: flex;
+    display: contents;
     position: static;
     transform: translateX(0);
 
-    background-color: yellowgreen;
     padding: 0;
     width: auto;
     height: auto;
@@ -72,12 +72,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-
 }
-
-// body.mobile-menu--is-open {
-//   overflow: hidden;
-// }
 
 .mobile-menu--is-open {
   position: absolute;
@@ -87,22 +82,11 @@
   transform: translateX(0);
   transition: 0.5s;
   visibility: visible;
-
- }
-
-
-@media screen and (min-width: $desktop) {
-  .site-nav {
-    display: block;
-  }
 }
 
 .mobile-menu__box {
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: $desktop) {
-    // order: 2;
-  }
 }
 
 // кнопка купить для хедера=============
@@ -111,12 +95,13 @@
   margin-right: 0;
   margin-left: 30px;
   font-weight: 700;
+  width: 160px;
 
   @media screen and (min-width: $tablet) {
     display: block;
   }
   @media screen and (min-width: $desktop) {
-    margin-left: auto;
+    margin-left: 0;
     order: 2;
   }
 }
@@ -150,27 +135,22 @@
 // переключатель мобильного меню=============
 
 .mobile-menu__switch {
+  display: flex;
   padding: 0;
   background-color: transparent;
   border: transparent 1px solid;
-}
-
-.mobile-menu__switch--open {
-  @media screen and (min-width: $tablet) {
-    margin-left: auto;
+  &--open {
+    @media screen and (min-width: $tablet) {
+      margin-left: auto;
+    }
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
   }
-
-  @media screen and (min-width: $desktop) {
-    display: none;
-  }
-}
-.mobile-menu__switch--open.--is-open {
-  display: none;
 }
 
 .mobile-menu__icon-cross {
-   fill: var(--main-bgc);
-  
+  fill: var(--main-bgc);
 }
 .mobile-menu__icon-burger {
   fill: var(--accent-color);
@@ -187,10 +167,10 @@
   z-index: 1;
 }
 
-// .mobile-menu__switch:hover .mobile-menu__icon-cross,
-// .mobile-menu__switch:focus .mobile-menu__icon-cross {
-//   fill: var(--accent-color);
-// }
+.mobile-menu__switch:hover .mobile-menu__icon-cross,
+.mobile-menu__switch:focus .mobile-menu__icon-cross {
+  fill: var(--accent-color);
+}
 
 // ===========навигация сайта=========
 
@@ -230,7 +210,6 @@
 
 .site-nav__link {
   padding: 12px 0;
-  //   background-color: var(--mobile-menu-bgc);
 
   color: var(--main-bgc);
 
@@ -249,4 +228,3 @@
     font-size: 16px;
   }
 }
-
