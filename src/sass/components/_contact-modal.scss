@@ -80,7 +80,7 @@
   @media screen and (max-width: $mobile-only) {
     display: none;
   }
-
+  display: block;
   position: absolute;
   top: 40px;
   right: 80px;
@@ -88,9 +88,17 @@
   height: 133px;
   z-index: -1;
 
+  @media screen and (min-width: $desktop) {
+    top: 40px;
+    right: 80px;
+    width: 300px;
+    height: 300px;
+  }
+
   &::after {
     content: '';
     background-image: url('../images/Contacts/ellipse.svg');
+    background-repeat: no-repeat;
 
     @media screen and (max-width: $mobile-only) {
       display: none;
@@ -102,6 +110,10 @@
       top: -120px;
       right: -120px;
       z-index: -2;
+    }
+    @media screen and (min-width: $desktop) {
+      top: -120px;
+      right: -15px;
     }
   }
 }
