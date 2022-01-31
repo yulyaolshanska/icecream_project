@@ -1,22 +1,11 @@
 .header {
   position: absolute;
-  transition: transform 0.1s linear;
-  background-color: transparent;
-  position: absolute;
   z-index: 50;
   width: 100%;
   padding-top: 6px;
-  @media screen and (max-width: $mobile-only) {
-    position: fixed;
-    background-color: var(--brand-color);
-  }
   @media screen and (min-width: $tablet) {
     padding-top: 37px;
   }
-}
-
-.header.hide {
-  transform: translateY(-60px);
 }
 
 .header__container {
