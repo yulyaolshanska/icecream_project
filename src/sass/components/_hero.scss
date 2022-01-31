@@ -1,31 +1,24 @@
 .hero {
   background-color: var(--brand-color);
-  // @media screen and (max-width: $mobile-only) {
-  //   margin-bottom: 80px;
-  // }
+  background-image: url(../images/Hero/ellipse-mob.png);
+  background-repeat: no-repeat;
+  background-position: right;
 
-  // @media screen and (min-width: $tablet) {
-  //   margin-bottom: 110px;
-  // }
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/Hero/ellipse-tab.png);
+    background-position: center right 35%;
+  }
 
-  // @media screen and (min-width: $desktop) {
-  //   margin-bottom: 130px;
-  // }
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/Hero/ellipse.png);
+    background-position: center right 35%;
+  }
+
 }
 .hero__block {
   position: relative;
-  background-color: var(--brand-color);
-  background-image: url(/images/Hero/ellipse-mob.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  @media screen and (min-width: $tablet) {
-    background-image: url(/images/Hero/ellipse-tab.png);
-    background-position: center right 35%;
-  }
-  @media screen and (min-width: $desktop) {
-    background-image: url(/images/Hero/ellipse.png);
-    background-position: center right 35%;
-  }
+  // background-color: var(--brand-color);
+  
 }
 .setion__titel {
   font-family: Titan One;
@@ -151,7 +144,7 @@
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background-image: url(/images/Hero/arrow-right_3-removebg-preview.png);
+    background-image: url(../images/Hero/arrow-right_3-removebg-preview.png);
     background-color: var(--main-bgc);
     background-position: center;
     background-size: contain;
@@ -182,13 +175,13 @@
 .hero__item {
   @media screen and (min-width: $tablet) {
     margin-bottom: 14px;
-    background-image: url(/images/Hero/ellipse-white.png);
+    background-image: url(../images/Hero/ellipse-white.png);
 
     background-repeat: no-repeat;
     background-position: right top;
   }
   @media screen and (min-width: $desktop) {
-    background-image: url(/images/Hero/elips-white--desc.png);
+    background-image: url(../images/Hero/elips-white--desc.png);
   }
 }
 .hero__num {
