@@ -1,12 +1,22 @@
 .header {
+  position: absolute;
+  transition: transform 0.1s linear;
   background-color: transparent;
   position: absolute;
   z-index: 50;
   width: 100%;
   padding-top: 6px;
+  @media screen and (max-width: $mobile-only) {
+    position: fixed;
+    background-color: var(--brand-color);
+  }
   @media screen and (min-width: $tablet) {
     padding-top: 37px;
   }
+}
+
+.header.hide {
+  transform: translateY(-60px);
 }
 
 .header__container {
@@ -75,7 +85,7 @@
 }
 
 .mobile-menu--is-open {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   display: block;
@@ -162,8 +172,8 @@
 .mobile-menu--is-open .mobile-menu__switch--close {
   display: block;
   position: absolute;
-  top: 23px;
-  right: 28px;
+  top: 13px;
+  right: 18px;
   z-index: 1;
 }
 
@@ -211,11 +221,7 @@
 .site-nav__link {
   padding: 12px 0;
 
-  color: var(--main-bgc);
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.3;
+  @include text(700, 14px, 1.3, 0, var(--main-bgc));
 
   &:active,
   &:hover,
