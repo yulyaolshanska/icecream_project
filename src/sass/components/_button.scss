@@ -17,6 +17,15 @@
   color: var(--main-bgc);
   background-color: var(--accent-color);
 
+  &.contacts__button {
+    @media screen and (min-width: 768px) {
+      min-width: 191px;
+    }
+    @media screen and (min-width: 1280px) {
+      min-width: 198px;
+    }
+  }
+
   &::after {
     content: '';
     background-image: url('../images/Contacts/greater-than-white.svg');
@@ -35,6 +44,19 @@
 .button--white {
   color: var(--accent-color);
   background-color: var(--main-bgc);
+
+  &.about__btn {
+    width: 176px;
+  }
+  &.contacts__button {
+    min-width: 161px;
+    @media screen and (min-width: 768px) {
+      min-width: 174px;
+    }
+    @media screen and (min-width: 1280px) {
+      min-width: 180px;
+    }
+  }
 
   &::after {
     content: '';
