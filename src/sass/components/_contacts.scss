@@ -30,11 +30,13 @@
     flex-wrap: wrap;
     margin-top: -20px;
     margin-left: -20px;
+    margin-bottom: 80px;
   }
 
   @media screen and (min-width: $desktop) {
     margin-top: -30px;
     margin-left: -30px;
+    margin-bottom: 86px;
   }
 }
 
