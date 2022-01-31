@@ -2,18 +2,45 @@
   width: 100%;
   display: inline-block;
 }
-.persent-size {
-  width: 14%;
+// 
+
+.gallery__section {
+  // background: linear-gradient(180deg, #fff5f6 40%, #fff 60%);
+  background-image: linear-gradient(to bottom, var(--light-brand-color) 30%, var(--main-bgc) 30%);
+
 }
-.persent-size-1 {
-  width: 28%;
-}
-.elements-gride {
-  height: 122px;
-  @media screen and (min-width: 768px) {
-    height: 264px;
+
+.gallery__container{
+    margin: 0 auto;
+ 
+    @media screen and (min-width: $mobile) {
+      width: $mobile;
+     
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 1080px;
+     
+    }
   }
-  @media screen and (min-width: 768px) {
-    height: 430px;
-  }
-}
+
+  // .persent-size {
+  //     width: 14%;
+  //   }
+  //   .persent-size-1 {
+  //     width: 28%;
+  //   }
+  //   .elements-gride {
+  //     height: 122px;
+  //     @media screen and (min-width: 768px) {
+  //       height: 264px;
+  //     }
+  //     @media screen and (min-width: 768px) {
+  //       height: 430px;
+  //     }}
+
+

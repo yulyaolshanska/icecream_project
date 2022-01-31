@@ -6,8 +6,23 @@
 }
 
 .swiper {
-  // width: 926px;
-  height: 350px;
+  max-width: 280px;
+  height: 530px;
+
+  @media screen and (min-width: $mobile) {
+    height: 541px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 620px;
+    height: 382px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 926px;
+    height: 350px;
+  }
+
   & .swiper-pagination-bullets {
     bottom: 0;
   }
@@ -36,19 +51,22 @@
     content: '';
     position: absolute;
     top: 140px;
-    left: 40px;
+    left: 60px;
     width: 54px;
     height: 40px;
     z-index: 1;
     background-image: url('../images/сustomer-reviews/quote.svg');
+
+    @media screen and (min-width: $tablet) {
+      left: 90px;
+      top: 130px;
+    }
   }
 }
 
 .slider__foto {
   margin: 0 auto;
   max-width: 100%;
-  // width: 85px;
-  // height: 85px;
   margin-bottom: 29px;
 
   @media screen and (min-width: $tablet) {
