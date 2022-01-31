@@ -16,7 +16,7 @@
 .products__item {
   position: relative;
 
-  max-height: 485px;
+  // min-height: 485px;
 
   padding: 160px 40px 40px 40px;
   border-radius: var(--card-border-radius);
@@ -35,6 +35,10 @@
     &:not(:last-child) {
       margin-bottom: 130px;
     }
+       max-width: 350px;
+       height: 485px;
+       margin-left: auto;
+       margin-right: auto;
   }
   @media screen and (min-width: $tablet) {
     &:not(:last-child) {
@@ -42,6 +46,7 @@
     }
     padding: 150px 10px 40px 10px;
     max-height: 590px;
+ 
   }
   @media screen and (min-width: $desktop) {
     &:not(:last-child) {
@@ -239,3 +244,18 @@
   height: 12px;
   fill: var(--accent-color);
 }
+
+.products__section {
+@media screen and (max-width: $mobile-only) {
+  padding-top: 80px;
+}
+
+@media screen and (min-width: $tablet) {
+  padding-top: 110px;
+}
+
+@media screen and (min-width: $desktop) {
+  padding-top: 130px;
+}
+
+} 

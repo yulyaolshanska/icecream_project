@@ -1,16 +1,16 @@
 .hero {
   background-color: var(--brand-color);
-  @media screen and (max-width: $mobile-only) {
-    margin-bottom: 80px;
-  }
+  // @media screen and (max-width: $mobile-only) {
+  //   margin-bottom: 80px;
+  // }
 
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 110px;
-  }
+  // @media screen and (min-width: $tablet) {
+  //   margin-bottom: 110px;
+  // }
 
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 130px;
-  }
+  // @media screen and (min-width: $desktop) {
+  //   margin-bottom: 130px;
+  // }
 }
 .hero__block {
   position: relative;
@@ -128,8 +128,8 @@
     // display: none;
   }
 }
-.herro__icon-milk {
-}
+// .herro__icon-milk {
+// }
 
 .herro__text-milk {
   position: relative;
