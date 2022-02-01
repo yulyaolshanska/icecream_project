@@ -1,3 +1,17 @@
+.products__section {
+  @media screen and (max-width: $mobile-only) {
+    padding-top: 80px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 110px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 130px;
+  }
+}
+
 .products__title {
   margin-bottom: 145px;
 
@@ -5,6 +19,7 @@
     margin-bottom: 260px;
   }
 }
+
 .products {
   color: var(--main-bgc);
 
@@ -35,24 +50,24 @@
     &:not(:last-child) {
       margin-bottom: 130px;
     }
-       max-width: 280px;
-       margin-left: auto;
-       margin-right: auto;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
   @media screen and (min-width: $tablet) {
     &:not(:last-child) {
       margin-right: 20px;
     }
-    padding: 150px 10px 40px 10px;
-    max-height: 590px;
- 
+
+    max-width: 485px;
+    padding: 150px 11px 40px 11px;
+
   }
   @media screen and (min-width: $desktop) {
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 25px;
     }
-    max-height: 735px;
-    padding: 160px 45px 45px 50px;
+    padding: 160px 45px 50px 45px;
   }
 }
 
@@ -233,9 +248,37 @@
   border-radius: 50%;
   border-style: none;
 
-  cursor: pointer;
+  transition: color 200ms linear, background-color 200ms linear, box-shadow 200ms linear,
+    transform 200ms linear;
 
-  background-color: var(--main-bgc);
+  cursor: pointer;
+background-color: var(--main-bgc);
+
+transition: background-color 0.25s linear,
+transform 0.25s linear;
+
+&:hover,
+&:focus {
+  background-color: var(--light-button-bgc);
+  transform: scale(1.2);
+  outline-color: var(--accent-color);
+
+  // background-color: var(--products-btn-bgc);
+  // &:hover,
+  // &:focus {
+  //   background-color: var(--second-products-btn-bgc);
+  //   box-shadow: -2px 3px 3px var(--second-products-btn-shadow);
+  //   transform: scale(1.1);
+  //   border: 1px solid var(--second-products-btn-border);
+  //   padding-right: 6px;
+  // }
+  // &:active {
+  //   box-shadow: -1px 1px 2px var(--second-products-btn-shadow);
+  //   transform: scale(1);
+
+  
+
+  }
 }
 
 .btn-icon {
@@ -244,17 +287,3 @@
   fill: var(--accent-color);
 }
 
-.products__section {
-@media screen and (max-width: $mobile-only) {
-  padding-top: 80px;
-}
-
-@media screen and (min-width: $tablet) {
-  padding-top: 110px;
-}
-
-@media screen and (min-width: $desktop) {
-  padding-top: 130px;
-}
-
-} 
