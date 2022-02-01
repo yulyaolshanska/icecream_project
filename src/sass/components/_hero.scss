@@ -13,12 +13,10 @@
     background-image: url(../images/Hero/Ellipse.png);
     background-position: center right 35%;
   }
-
 }
 .hero__block {
   position: relative;
   // background-color: var(--brand-color);
-  
 }
 .setion__titel {
   font-family: Titan One;
@@ -26,7 +24,6 @@
   z-index: 25;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
   padding-top: 137px;
   color: var(--accent-color);
 
@@ -68,20 +65,18 @@
 
 /*-------------btn--------------------*/
 .hero__button {
-  padding: 8px 20px;
-  // display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px solid var(--accent-color);
+  width: 61.2px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
   border-radius: 50px;
   margin-bottom: 160px;
   font-size: 8px;
   line-height: 1.25;
-
-  &:not(last-child) {
-    margin-right: 10px;
-  }
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--accent-color);
   color: var(--main-bgc);
   @media screen and (min-width: $tablet) {
@@ -91,21 +86,32 @@
     margin-bottom: 292px;
     font-size: 14px;
     line-height: 1.28;
+    width: 104px;
+    height: 40px;
     &:not(last-child) {
       margin-right: 17px;
     }
   }
 }
 .hero__button--white {
-  border: 1px solid var(--main-bgc);
+  width: 82.8px;
+  height: 24px;
+  border: none;
+  margin-right: 0;
   background-color: var(--main-bgc);
   color: var(--accent-color);
+  @media screen and (min-width: $desktop) {
+    width: 138px;
+    height: 40px;
+  }
 }
 .hero__button-block {
   display: flex;
   position: relative;
   z-index: 20;
-  margin-left: 20px;
+  &:not(last-child) {
+    margin-right: 10px;
+  }
 }
 /*-------------milk--------------------*/
 .hero__milk {
@@ -221,6 +227,4 @@
     right: 34px;
     bottom: 0;
   }
-
 }
-
