@@ -130,22 +130,28 @@
          
     }
 
+   
+
     &:not(:last-child) {
         margin-bottom: 20px;
 
-        @media screen and (min-width: $desktop){
+      @media screen and (min-width: $desktop){
              margin-bottom: 35px;
         }
-    }
-}
+ }
+ @media screen and (min-width: $tablet) {
+   .text-box &--last {
+     margin-bottom: 0px;
+   }
+}}
 
 .about__btn {
      @media screen and (min-width: $tablet) {
-         margin-top: 40px;
+         margin-top: 60px;
      }
 
       @media screen and (min-width: $desktop) {
-        margin-top: 10px;
+        margin-top: 45px;
       }
 
 }
