@@ -58,8 +58,10 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
+
     max-width: 485px;
     padding: 150px 11px 40px 11px;
+
   }
   @media screen and (min-width: $desktop) {
     &:not(:last-child) {
@@ -246,17 +248,36 @@
   border-radius: 50%;
   border-style: none;
 
+  transition: color 200ms linear, background-color 200ms linear, box-shadow 200ms linear,
+    transform 200ms linear;
+
   cursor: pointer;
+background-color: var(--main-bgc);
 
-  background-color: var(--main-bgc);
+transition: background-color 0.25s linear,
+transform 0.25s linear;
 
-  transition: background-color 0.25s linear, transform 0.25s linear;
+&:hover,
+&:focus {
+  background-color: var(--light-button-bgc);
+  transform: scale(1.2);
+  outline-color: var(--accent-color);
 
-  &:hover,
-  &:focus {
-    background-color: var(--light-button-bgc);
-    transform: scale(1.2);
-    outline-color: var(--accent-color);
+  // background-color: var(--products-btn-bgc);
+  // &:hover,
+  // &:focus {
+  //   background-color: var(--second-products-btn-bgc);
+  //   box-shadow: -2px 3px 3px var(--second-products-btn-shadow);
+  //   transform: scale(1.1);
+  //   border: 1px solid var(--second-products-btn-border);
+  //   padding-right: 6px;
+  // }
+  // &:active {
+  //   box-shadow: -1px 1px 2px var(--second-products-btn-shadow);
+  //   transform: scale(1);
+
+  
+
   }
 }
 
@@ -265,3 +286,4 @@
   height: 12px;
   fill: var(--accent-color);
 }
+
