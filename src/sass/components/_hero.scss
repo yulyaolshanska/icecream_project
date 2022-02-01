@@ -106,9 +106,6 @@
   display: flex;
   position: relative;
   z-index: 20;
-  &:not(last-child) {
-    margin-right: 10px;
-  }
 }
 /*-------------milk--------------------*/
 .hero__milk {
