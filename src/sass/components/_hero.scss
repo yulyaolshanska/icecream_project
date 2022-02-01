@@ -1,6 +1,7 @@
 .hero {
   background-color: var(--brand-color);
 
+
 }
 
 .hero__block {
@@ -9,6 +10,7 @@
  
 
   background-image: url(../images/Hero/Ellipse-mob.png);
+
 
   background-repeat: no-repeat;
   background-position: right;
@@ -30,6 +32,7 @@
     padding-top: 171px;
     padding-bottom: 295px;
   }
+
   position: relative;
   // background-color: var(--brand-color);
 }
@@ -215,7 +218,9 @@
   @media screen and (min-width: $tablet) {
 
    
-    background-image: url(../images/Hero/ellipse-white.png);
+
+    background-image: url(../images/Hero/Ellipse-white.png);
+
 
 
     background-repeat: no-repeat;
