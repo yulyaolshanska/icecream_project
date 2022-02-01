@@ -9,8 +9,8 @@
   font-size: 16px;
   line-height: 1.29;
   padding: 0 20px;
-  transition: color 250ms linear;
-  transition: background-color 250ms linear;
+  transition: color 250ms linear, background-color 250ms linear, transform 250ms linear;
+
   font-weight: 700;
 }
 
@@ -39,7 +39,19 @@
   &:hover,
   &:focus {
     background-color: var(--hover-button-bgc);
+    box-shadow: -2px 3px 4px var(--hover-button-shadow);
+    transform: scale(1.05);
+    border: 1px solid var(--hover-button-border);
+    padding-right: 0px;
   }
+  &:active {
+    box-shadow: -1px 1px 2px var(--hover-button-shadow);
+    transform: scale(1);
+  }
+}
+
+.button--pink:hover::after {
+  width: 24px;
 }
 
 .button--white {
@@ -71,5 +83,17 @@
   &:hover,
   &:focus {
     background-color: var(--light-button-bgc);
+    box-shadow: -2px 3px 4px var(--light-button-shadow);
+    transform: scale(1.05);
+    border: 1px solid var(--light-button-border);
+    padding-right: 10px;
   }
+  &:active {
+    box-shadow: -1px 1px 2px var(--light-button-shadow);
+    transform: scale(1);
+  }
+}
+
+.button--white:hover::after {
+  width: 17px;
 }

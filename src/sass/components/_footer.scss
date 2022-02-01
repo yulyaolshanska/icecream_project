@@ -87,6 +87,13 @@
   &:hover,
   &:focus {
     background-color: var(--accent-color);
+    box-shadow: -2px 3px 4px var(--second-social-btn-shadow);
+    transform: scale(1.05);
+    border: 1px solid var(--second-social-btn-border);
+  }
+  &:active {
+    box-shadow: -1px 1px 2px var(--second-social-btn-shadow);
+    transform: scale(1);
   }
 }
 
