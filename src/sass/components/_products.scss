@@ -16,7 +16,7 @@
 .products__item {
   position: relative;
 
-  // min-height: 485px;
+  min-height: 485px;
 
   padding: 160px 40px 40px 40px;
   border-radius: var(--card-border-radius);
@@ -35,8 +35,7 @@
     &:not(:last-child) {
       margin-bottom: 130px;
     }
-       max-width: 350px;
-       height: 485px;
+       max-width: 280px;
        margin-left: auto;
        margin-right: auto;
   }
