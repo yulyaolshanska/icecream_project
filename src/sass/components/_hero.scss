@@ -13,27 +13,18 @@
     background-image: url(../images/Hero/Ellipse.png);
     background-position: center right 35%;
   }
-
 }
 .hero__block {
   position: relative;
   // background-color: var(--brand-color);
-  
 }
-.setion__titel {
-  font-family: Titan One;
+.hero__titel {
   position: relative;
   z-index: 25;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
   padding-top: 137px;
-  color: var(--accent-color);
-
-  font-size: 48px;
-  line-height: 1.14;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  text-align: left;
   margin-bottom: 19px;
   @media screen and (min-width: $tablet) {
     padding-top: 102px;
@@ -48,15 +39,8 @@
 }
 .hero___titel--white {
   font-weight: normal;
+  text-align: left;
   color: var(--main-bgc);
-  text-transform: uppercase;
-  font-size: 26px;
-  line-height: 1.15;
-  @media screen and (min-width: $desktop) {
-    font-size: 38px;
-    line-height: 44px;
-    letter-spacing: 0.04em;
-  }
 }
 /*-------------ice-cream icon--------------------*/
 .hero__ice-cream {
@@ -68,22 +52,22 @@
 
 /*-------------btn--------------------*/
 .hero__button {
-  padding: 8px 20px;
-  // display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px solid var(--accent-color);
-  border-radius: 50px;
+  width: 61.2px;
+  height: 24px;
   margin-bottom: 160px;
+  padding: 0;
+  border-radius: var(--button-border-radius);
   font-size: 8px;
+  font-weight: 400;
   line-height: 1.25;
-
-  &:not(last-child) {
-    margin-right: 10px;
-  }
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--accent-color);
   color: var(--main-bgc);
+  transition: color 250ms linear;
+  transition: background-color 250ms linear;
   @media screen and (min-width: $tablet) {
     margin-bottom: 173px;
   }
@@ -91,21 +75,37 @@
     margin-bottom: 292px;
     font-size: 14px;
     line-height: 1.28;
-    &:not(last-child) {
+    width: 104px;
+    height: 40px;
+    &:not(:last-child) {
       margin-right: 17px;
     }
   }
+  &:hover,
+  &:focus {
+    background-color: var(--hover-button-bgc);
+  }
 }
 .hero__button--white {
-  border: 1px solid var(--main-bgc);
+  width: 82.8px;
+  height: 24px;
+  border: none;
+  margin-right: 0;
   background-color: var(--main-bgc);
   color: var(--accent-color);
+  @media screen and (min-width: $desktop) {
+    width: 138px;
+    height: 40px;
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--light-button-bgc);
+  }
 }
 .hero__button-block {
   display: flex;
   position: relative;
   z-index: 20;
-  margin-left: 20px;
 }
 /*-------------milk--------------------*/
 .hero__milk {
@@ -116,25 +116,26 @@
     align-items: center;
     justify-content: center;
     bottom: 28px;
+    left: 34px;
   }
   @media screen and (min-width: $desktop) {
-    // display: none;
+    left: 0px;
+bottom: 45px;
   }
 }
-// .herro__icon-milk {
-// }
+
 
 .herro__text-milk {
   position: relative;
   @media screen and (min-width: $tablet) {
     width: 114px;
     font-size: 8px;
-    line-height: 150%;
+    line-height: 1.5;
     color: var(--main-bgc);
   }
   @media screen and (min-width: $desktop) {
     font-size: 14px;
-    line-height: 140%;
+    line-height: 1.4;
     width: 200px;
     height: 78px;
   }
@@ -174,14 +175,17 @@
 }
 .hero__item {
   @media screen and (min-width: $tablet) {
-    margin-bottom: 14px;
+   
     background-image: url(../images/Hero/Ellipse-white.png);
 
     background-repeat: no-repeat;
-    background-position: right top;
+   background-position: right 15% top 0%;
   }
   @media screen and (min-width: $desktop) {
     background-image: url(../images/Hero/ellips-white--desc.png);
+  }
+  &:not(:last-child) {
+ margin-bottom: 14px;
   }
 }
 .hero__num {
@@ -221,6 +225,4 @@
     right: 34px;
     bottom: 0;
   }
-
 }
-
