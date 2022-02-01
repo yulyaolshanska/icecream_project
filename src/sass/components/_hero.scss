@@ -153,6 +153,8 @@ bottom: 45px;
     position: absolute;
     left: 50%;
     top: 80%;
+    border: none;
+    cursor: pointer;
   }
 
   @media screen and (min-width: $desktop) {
