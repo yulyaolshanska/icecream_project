@@ -28,12 +28,13 @@
     refs.contactModal.classList.toggle('visually-hidden');
 
     // refs.modalBuy.classList.toggle('visually-hidden');
+    
   }
 
   function toggleModaFr() {
     document.body.classList.toggle('contact-modal-open');
     refs.contactModal.classList.toggle('visually-hidden');
-    let paragraph = document.querySelector('.contact-modal__title');
+    let paragraph = document.querySelector('.js-contact-modal__title');
     paragraph.textContent = 'Franchise!';    
   }
   
