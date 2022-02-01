@@ -19,7 +19,7 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 620px;
   background-color: var(--light-section-bgc);
-z-index: 950;
+  z-index: 950;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -135,7 +135,8 @@ z-index: 950;
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 700px;
+    width: 900px;
+    max-width: 900px;
   }
 }
 
@@ -199,7 +200,6 @@ z-index: 950;
 }
 
 .contact-modal__button-box {
-  margin: 0 auto;
   @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: center;
@@ -207,33 +207,42 @@ z-index: 950;
 }
 
 .contact-modal__button {
-  display: block;
-  min-width: 160px;
-  margin: 0 auto;
-
-  
-}
-
-.contact-modal__button:not(:last-child) {
-
-  @media screen and (min-width: $tablet) {
-   // margin-right: 20px;
-  }
-  
+  width: 160px;
 }
 
 .contact-modal__link {
+  cursor: pointer;
+  height: 44px;
+  min-width: 64px;
+  border: none;
+  border-radius: var(--button-border-radius);
+  padding: 12px 20px;
+  transition: color 250ms linear;
+  transition: background-color 250ms linear;
+  color: var(--main-bgc);
+  background-color: var(--accent-color);
+  width: 160px;
   display: block;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
+  margin: 0 auto 10px auto;
 
   @media screen and (min-width: $tablet) {
-    margin-bottom: 0;
+    margin: 0 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
+  &::after {
+    content: '';
+    background-image: url('../images/Contacts/greater-than-white.svg');
+    height: 10px;
+    width: 7px;
+    display: inline-block;
+    margin-left: 11px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-button-bgc);
   }
 }
