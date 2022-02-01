@@ -16,6 +16,8 @@
   // refs.openModalBuy.addEventListener('click', toggleModal);
   // refs.closeModalBuy.addEventListener('click', toggleModal);
 
+// document.addEventListener('touchstart', onTouchStart, {passive: true});
+
   function toggleModal() {
     document.body.classList.toggle('contact-modal-open');
     
