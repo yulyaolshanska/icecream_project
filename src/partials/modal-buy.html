@@ -1,0 +1,116 @@
+<div class="modal-buy__backdrop backdrop visually-hidden modal-buy__offer modal-buy-menu__offer" >
+    <div class="modal-buy ">
+      <button class="modal-button__close modal-buy--close modal-buy-menu--close" >
+        <svg class="modal-button__icon">
+          <use href="./images/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+      <b class="contact-modal__title section__title">Order</b>
+  
+      <!-- добавить адапитв рисунка -->
+      <picture class="contact-modal__img">
+        <source
+          srcset="./images/Hero/hero-girl-desktop.png 1x,
+                 ./images/Hero/hero-girl-desktop@2x.png 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./images/Hero/hero-girl-tablet.png 1x,
+                 ./images/Hero/hero-girl-tablet@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+  
+        <img src="./images/Hero/hero-girl-tablet.png" alt="girl with icecream" />
+      </picture>
+
+
+            <div class="modal-buy__block">
+
+<!-- ==========здесь должна быть форма заказа мороженного==== -->
+      <form class="modal-buy__form">
+        <h2 class="section__label modal-buy__title">Сделайте заказ</h2>
+        <div>
+          <label class="form-field">
+            <input
+              type="text"
+              class="form-input"
+              name="user-name"
+              autofocus
+              required
+              placeholder=" "
+            />
+            <span class="form-label">Имя</span>
+            <!-- <svg class="form-icon" width="18" height="18">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg> -->
+          </label>
+
+          <label class="form-field">
+            <input type="tel" class="form-input" name="tel" required placeholder=" " />
+            <span class="form-label">Телефон</span>
+            <!-- <svg class="form-icon" width="18" height="18">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg> -->
+          </label>
+
+          <label class="form-field">
+            <input type="email" class="form-input" name="email" required placeholder=" " />
+            <span class="form-label">Почта</span>
+            <!-- <svg class="form-icon" width="18" height="18">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg> -->
+          </label>
+        </div>
+
+        <!-- === -->
+        <div class="comment-section">
+          <label for="comment" class="comment-label">Комментарий</label>
+          <textarea
+            class="comment"
+            name="comment"
+            id="comment"
+            placeholder="Введите текст"
+          ></textarea>
+        </div>
+
+
+        <!-- <div class="policy">
+          <label class="policy-field"
+            ><input type="checkbox" class="checkbox" name="policy" required />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-label">Соглашаюсь с рассылкой и принимаю</span>
+            <a href="#" class="checkbox-link">Условия договора</a>
+          </label>
+        </div> -->
+
+        <button type="submit" class="button button--white">Отправить</button>
+      </form>
+   
+<!-- ==========здесь должна закончиться форма заказа мороженного==== -->
+
+      <div class="modal-buy__box modal-buy__box--bottom">
+        <div class="modal-buy__circle">Hello world</div>
+        <div class="modal-buy__circle">Hello world</div>
+        <div class="modal-buy__circle">Hello world</div>
+        
+      </div>
+      <!--=========== кнопки home  Franchise============-->
+
+      <!-- <div class="contact-modal__button-box">
+        <a href="./" class="contact-modal__link">
+          <button class="button button--white contact-modal__button">Home</button></a
+        >
+        <a href="#" class="contact-modal__link"
+          ><button class="button button--pink contact-modal__button">Franchise</button></a
+        >
+      </div> -->
+
+<!--=========== кнопки home  Franchise   end ============-->
+            </div>
+
+    </div>
+  
+     
+    
+</div>
+  
