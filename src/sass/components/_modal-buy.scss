@@ -55,10 +55,15 @@
   
   }
 
-  
-  .backdrop.visually-hidden .modal-buy {
-    transform: translate(-50%, -50%) scale(1.2);
+
+  body.modal-buy-menu--visible {
+    overflow: hidden;
   }
+
+  
+  // .backdrop.visually-hidden .modal-buy {
+  //   transform: translate(-50%, -50%) scale(1.2);
+  // }
   
   .modal-button__close {
     width: 40px;
