@@ -1,17 +1,17 @@
 .hero {
   background-color: var(--brand-color);
 
-  background-image: url(../images/Hero/ellipse-mob.png);
+  background-image: url(../images/Hero/Ellipse-mob.png);
   background-repeat: no-repeat;
   background-position: right;
 
   @media screen and (min-width: $tablet) {
-    background-image: url(../images/Hero/ellipse-tab.png);
+    background-image: url(../images/Hero/Ellipse-tab.png);
     background-position: center right 35%;
   }
 
   @media screen and (min-width: $desktop) {
-    background-image: url(../images/Hero/ellipse.png);
+    background-image: url(../images/Hero/Ellipse.png);
     background-position: center right 35%;
   }
 
@@ -181,7 +181,7 @@ bottom: 45px;
   @media screen and (min-width: $tablet) {
    
 
-    background-image: url(../images/Hero/ellipse-white.png);
+    background-image: url(../images/Hero/Ellipse-white.png);
 
 
     background-repeat: no-repeat;
