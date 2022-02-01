@@ -12,14 +12,21 @@
 
 // Цвет фона кнопки в фокусе #ECEBEB
 // Цвет текста кнопки в фокусе #d41443
+// Цвет рамки кнопки в фокусе #9b0e2f
+// Цвет тени кнопки в фокусе #af0f34
+
 // Вторичный цвет фона кнопки в фокусе #D41342
 // Вторичный цвет текста кнопки в фокусе #FFF
+// Вторичный цвет рамки кнопки в фокусе #dad5d5
+// Вторичный цвет тени кнопки в фокусе #cac7c7
 
 // Цвет пункта моб. меню #fff
 // Цвет пункта моб. меню в фокусе #d41443
 
 // Цвет иконки контактов #FEA5BB
 // Цвет иконки контактов в фокусе #D41443
+// Цвет рамки кнопки в фокусе #af1139
+// Цвет тени кнопки в фокусе #c41641
 
 // Цвет фона мобильного меню #E17992
 
@@ -42,14 +49,26 @@
   --products-second-card-color: #f0d1a5;
   --products-third-card-color: #c2e297;
 
+  --products-btn-bgc: #fff;
+  --second-products-btn-shadow: #b1abac;
+  --second-products-btn-border: #d1d1d1;
+  --second-products-btn-bgc: #f5f2f3;
+
   --light-button-bgc: #ecebeb;
+  --light-button-shadow: #cac7c7;
+  --light-button-border: #dad5d5;
+
   --hover-button-bgc: #c7133e;
+  --hover-button-shadow: #af0f34;
+  --hover-button-border: #9b0e2f;
 
   --mobile-menu-bgc: #e17992;
 
   --slider-item-color: #d9d9d9;
 
   --contacts-icon-bgc: #fea5bb;
+  --second-social-btn-shadow: #c41641;
+  --second-social-btn-border: #af1139;
 
   --button-border-radius: 22px;
   --card-border-radius: 24px;
