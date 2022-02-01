@@ -170,8 +170,8 @@ z-index: 950;
   position: relative;
   flex-direction: column;
   width: 124px;
-  &:not(:last-child) {
-  }
+  // &:not(:last-child) {
+  // }
 }
 
 .modal-box__num {
@@ -210,11 +210,15 @@ z-index: 950;
   min-width: 160px;
   margin: 0 auto;
 
+  
+}
+
+.contact-modal__button:not(:last-child) {
+
   @media screen and (min-width: $tablet) {
-    &:not(:last-child) {
-      // margin-right: 20px;
-    }
+   // margin-right: 20px;
   }
+  
 }
 
 .contact-modal__link {

@@ -1,0 +1,426 @@
+.modal-buy__backdrop {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // width: 100%;
+    // height: 100%;
+    background-image: linear-gradient(
+      to right,
+      rgba(238, 174, 202, 0.8) ,
+      rgba(178, 181, 184, 0.6)     
+      );
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 93px 15px;
+    overflow-y: scroll;
+  }
+  
+  .modal-buy {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+
+    max-width: 75vw;
+    min-height: 75vh;
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    background-image: linear-gradient(
+      to right top,
+      rgba(211, 45, 117, 0.8) ,
+      rgba(238, 174, 202, 0.8) ,
+      rgba(170, 65, 170, 0.6)     
+      );
+  
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 52px 27px 32px 27px;
+  
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      text-align: left;
+  
+      transform: translate(-50%, -50%) scale(1);
+      // max-width: 700px;
+      // min-height: 760px;
+      // width: 100%;
+    }
+  
+    @media screen and (min-width: $desktop) {
+      max-width: 1056px;
+      // min-height: 1128px;
+    }
+  
+  }
+
+
+  body.modal-buy-menu--visible {
+    overflow: hidden;
+  }
+
+  
+  // .backdrop.visually-hidden .modal-buy {
+  //   transform: translate(-50%, -50%) scale(1.2);
+  // }
+  
+  .modal-button__close {
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-bgc);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  
+  .modal-button__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--accent-color);
+  }
+  
+  .contact-modal__title {
+    text-align: center;
+  
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
+  }
+  
+  .contact-modal__img {
+    @media screen and (max-width: $mobile-only) {
+      display: none;
+    }
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    width: 168px;
+    height: 133px;
+    z-index: -1;
+  
+    @media screen and (min-width: $desktop) {
+      top: 40px;
+      right: 80px;
+      width: 300px;
+      height: 300px;
+    }
+  
+    &::after {
+      content: '';
+      background-image: url('../images/Contacts/ellipse.svg');
+      background-repeat: no-repeat;
+  
+      @media screen and (max-width: $mobile-only) {
+        display: none;
+      }
+      @media screen and (min-width: $tablet) {
+        height: 324px;
+        width: 322px;
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        z-index: -2;
+      }
+      @media screen and (min-width: $desktop) {
+        top: -120px;
+        right: -15px;
+      }
+    }
+  }
+ 
+  
+  .modal-box {
+    position: relative;
+  
+    @media screen and (max-width: $mobile-only) {
+      display: none;
+    }
+  
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+    }
+  }
+  .modal-box__list {
+    display: flex;
+    position: absolute;
+    top: 3px;
+    left: -130px;
+  }
+  
+  .modal-box__item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 124px;
+    // &:not(:last-child) {
+    // }
+  }
+  
+  .modal-box__num {
+    font-family: Titan One;
+    @include text(400, 46px, 0.8, 0.04em, var(--accent-color));
+    z-index: 1;
+  
+    &::after {
+      content: '';
+      background-image: url('../images/Hero/Ellipse-white.png');
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: -2px;
+      right: 45px;
+      z-index: -1;
+    }
+  }
+  
+  .modal-box__coffes {
+    @include text(400, 14px, 1.23, 0, var(--accent-color));
+    padding-left: 20px;
+  }
+  
+  .contact-modal__button-box {
+    margin: 0 auto;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  // .contact-modal__button {
+  //   display: block;
+  //   min-width: 160px;
+  //   margin: 0 auto;
+  
+    
+  // }
+  
+  .contact-modal__button:not(:last-child) {
+  
+    @media screen and (min-width: $tablet) {
+     // margin-right: 20px;
+    }
+    
+  }
+  
+  // .contact-modal__link {
+  //   display: block;
+  
+  //   &:not(:last-child) {
+  //     margin-bottom: 20px;
+  //   }
+  
+  //   @media screen and (min-width: $tablet) {
+  //     margin-bottom: 0;
+  
+  //     &:not(:last-child) {
+  //       margin-right: 20px;
+  //     }
+  //   }
+  // }
+  // 
+
+
+// =======modal buy block контейнер для формы и кругов
+
+
+.modal-buy__block {
+  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+  // form здесь форма начинается
+
+  .modal-buy__form {
+    margin-top: 20px;
+  }
+
+  .modal-buy__title {
+    color: var(--light-brand-color);
+    margin-bottom: 30px;
+  }
+
+  .form-field {
+    position: relative;
+    display: block;
+  }
+  .form-field:not(:last-child) {
+    margin-bottom: 28px;
+  }
+  .form-input {
+    width: 100%;
+    height: 40px;
+  
+    padding: 12px 12px 12px 42px;
+    border: 5px solid rgba(167, 25, 136, 0.637);
+    
+    border-radius: 30%;
+  
+    transition: border-color 250ms var(--timing-function);
+  }
+  .form-input:hover,
+  .comment:hover {
+    cursor: pointer;
+  }
+  .form-label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+  
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  
+    transition: transform 250ms var(--timing-function);
+  }
+  .form-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  
+    transition: fill 250ms var(--timing-function);
+  }
+  .form-field:focus-within .form-label {
+    transform: translate(-38px, -38px);
+  }
+  .form-field:focus-within .form-icon {
+    fill: var(--accent-color);
+  }
+  .form-field .form-input:focus {
+    border-color: var(--accent-color);
+    outline: var(--accent-color);
+  }
+  .form-input:not(:placeholder-shown) + .form-label {
+    transform: translate(-38px, -38px);
+  }
+  /* ======= */
+  .comment-section {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .comment {
+    display: block;
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    box-shadow: inset 0 0 10px 5px rgba(230, 101, 140, 0.527);
+  
+    transition: border-color 250ms var(--timing-function);
+  }
+  .comment-label {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    
+  }
+  .comment::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+  
+    color: rgba(117, 117, 117, 0.5);
+  }
+  .comment:focus {
+    border-color: var(--accent-color);
+    outline: var(--accent-color);
+  }
+ 
+ 
+  
+  .form-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+    transform: scale(1);
+    transition: transform 250ms var(--timing-function), background-color 250ms var(--timing-function);
+  }
+  
+
+// form здесь форма заканчивается
+
+
+  
+  .modal-buy__box {
+    border: 2px dashed #2a2a2a;
+    border-radius: 4px;
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    min-height: calc(10vh);
+    width: 80%;
+  }
+
+
+  .modal-buy__box--bottom {
+
+    margin-top: 30px;
+
+  }
+
+  .modal-buy__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    height: 50px;
+    // flex-shrink: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  
+    transition-property: transform;
+    transition-duration: 1000ms;
+
+    background-image: radial-gradient(
+      circle at center,
+      var(--brand-color) 10%, 
+      var(--accent-color) 50%
+    );
+
+          
+  }
+  
+  .modal-buy__box:hover .modal-buy__circle {
+    transform: scale(1.5);
+  }
+  
+  .circle:nth-child(1) {
+    
+  
+    transition-duration: 1000ms;
+  }
+  
