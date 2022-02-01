@@ -15,6 +15,8 @@
   // }
 }
 .hero__block {
+  padding-top: 193px;
+  padding-bottom: 160px;
   background-image: url(../images/Hero/Ellipse-mob.png);
   background-repeat: no-repeat;
   background-position: right;
@@ -22,11 +24,15 @@
   @media screen and (min-width: $tablet) {
     background-image: url(../images/Hero/Ellipse-tab.png);
     background-position: center right 35%;
+    padding-top: 102px;
+    padding-bottom: 177px;
   }
 
   @media screen and (min-width: $desktop) {
     background-image: url(../images/Hero/Ellipse.png);
     background-position: center right 35%;
+    padding-top: 171px;
+    padding-bottom: 295px;
   }
   position: relative;
   // background-color: var(--brand-color);
@@ -67,16 +73,7 @@
 
 /*-------------btn--------------------*/
 .hero__content {
-  padding-top: 193px;
-  padding-bottom: 160px;
-  @media screen and (min-width: $tablet) {
-    padding-top: 102px;
-    padding-bottom: 177px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding-top: 171px;
-    padding-bottom: 295px;
-  }
+  
 }
 .hero__button {
   width: 61.2px;
