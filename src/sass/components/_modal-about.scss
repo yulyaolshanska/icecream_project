@@ -1,4 +1,4 @@
-.modal-buy__backdrop {
+.modal-about__backdrop {
     z-index: 9999;
     position: fixed;
     top: 0;
@@ -18,13 +18,13 @@
     overflow-y: scroll;
   }
   
-  .modal-buy {
+  .modal-about {
     overflow: hidden;
     text-align: center;
     position: relative;
 
     max-width: 75vw;
-    min-height: 75vh;
+    height: 75vh;
     width: 100%;
 
     margin-left: auto;
@@ -64,12 +64,12 @@
   }
 
 
-  body.modal-buy-menu--visible {
+  body.modal-about-menu--visible {
     overflow: hidden;
   }
 
   
-  // .backdrop.visually-hidden .modal-buy {
+  // .backdrop.visually-hidden .modal-about {
   //   transform: translate(-50%, -50%) scale(1.2);
   // }
   
@@ -205,13 +205,12 @@
     }
   }
   
-  // .contact-modal__button {
-  //   display: block;
-  //   min-width: 160px;
-  //   margin: 0 auto;
-  
-    
-  // }
+  .contact-modal__button {
+    display: block;
+    min-width: 160px;
+    margin: 0 auto;
+      
+  }
   
   .contact-modal__button:not(:last-child) {
   
@@ -221,169 +220,76 @@
     
   }
   
-  // .contact-modal__link {
-  //   display: block;
+  .contact-modal__link {
+    display: block;
   
-  //   &:not(:last-child) {
-  //     margin-bottom: 20px;
-  //   }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   
-  //   @media screen and (min-width: $tablet) {
-  //     margin-bottom: 0;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
   
-  //     &:not(:last-child) {
-  //       margin-right: 20px;
-  //     }
-  //   }
-  // }
-  // 
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+  
 
 
 // =======modal buy block контейнер для формы и кругов
 
 
-.modal-buy__block {
+.modal-about__block {
   justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: wheat;
+    overflow: scroll;
+    height: 50vh;
 }
 
 
   // form здесь форма начинается
 
-  .modal-buy__form {
-    margin-top: 20px;
-  }
+ // form здесь форма заканчивается
 
-  .modal-buy__title {
-    color: var(--light-brand-color);
-    margin-bottom: 30px;
-  }
+// здесь начинается описание продукта
 
-  .form-field {
-    position: relative;
-    display: block;
-  }
-  .form-field:not(:last-child) {
-    margin-bottom: 28px;
-  }
-  .form-input {
-    width: 100%;
-    height: 40px;
-  
-    padding: 12px 12px 12px 42px;
-    border: 5px solid rgba(167, 25, 136, 0.637);
-    
-    border-radius: 30%;
-  
-    transition: border-color 250ms linear,
-    box-shadow 250ms linear,
-    border-color 250ms linear;
-  }
-  .form-input:hover,
-  .comment:hover {
-    cursor: pointer;
-  }
-  .form-label {
-    position: absolute;
-    top: 50%;
-    left: 42px;
-    transform: translateY(-50%);
-  
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-  
-    transition: transform 250ms linear;
-  }
 
-  .form-field:focus-within .form-label {
-    transform: translate(-38px, -38px);
-  }
-  .form-field:focus-within .form-icon {
-    fill: var(--accent-color);
-  }
-  .form-field .form-input:focus {
-    border-color: var(--accent-color);
-    outline: var(--accent-color);
-  }
-  .form-field .form-input:hover {
-    border-color: var(--brand-color);
-    box-shadow:-2px 3px 15px var(--dark-brand-color) ,
-                0px 1px 10px var(--dark-brand-color), 
-                3px 1px 6px var(--dark-brand-color) ;
-
-  }
-
-  .form-input:not(:placeholder-shown) + .form-label {
-    transform: translate(-38px, -38px);
-  }
-  /* ======= */
-  .comment-section {
-    margin-top: 10px;
+.modal-about__write {
     margin-bottom: 20px;
+    width: 360px;
   }
-  .comment {
-    display: block;
-    width: 100%;
-    height: 120px;
-    resize: none;
-    padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-
-    box-shadow: inset 0 0 10px 5px rgba(230, 101, 140, 0.527);
   
-    transition: border-color 250ms linear;
-  }
-  .comment-label {
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-
-    
-  }
-  .comment::placeholder {
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
+  .modal-about__label {
+    position: sticky;
+    top: -1px;
   
-    color: rgba(117, 117, 117, 0.5);
+    margin: 0;
+    padding: 16px;
+    color: var(--secondary-text-color);
+   background-color: var(--brand-color);
+   outline: var(--accent-color);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+                0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   }
-  .comment:focus {
-    border-color: var(--accent-color);
-    outline: var(--accent-color);
-    box-shadow:-2px 3px 15px var(--dark-brand-color) ,
-                0px 1px 10px var(--dark-brand-color), 
-                3px 1px 6px var(--dark-brand-color) ;
-  }
-
-
-  .comment:hover {
-  border-color: var(--brand-color);
-  box-shadow:-2px 3px 15px var(--dark-brand-color) ,
-              0px 1px 10px var(--dark-brand-color), 
-              3px 1px 6px var(--dark-brand-color) ;
-
-  }
+  
+.modal-about__text {
+    overflow: scroll;}
  
-  
-  .form-btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  
-    transform: scale(1);
-    transition: transform 250ms linear, background-color 250ms linear;
-  }
-  
-
-// form здесь форма заканчивается
 
 
+// здесь заканчивается описание продукта
   
-  .modal-buy__box {
+
+
+// кружочки в модал
+
+  .modal-about__box {
     border: 2px dashed #2a2a2a;
     border-radius: 4px;
     display: flex;
@@ -395,13 +301,12 @@
   }
 
 
-  .modal-buy__box--bottom {
-
+   .modal-about__box--bottom {
     margin-top: 30px;
 
   }
 
-  .modal-buy__circle {
+  .modal-about__circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -424,17 +329,15 @@
       var(--brand-color) 10%, 
       var(--accent-color) 50%
     );
-
           
   }
   
-  .modal-buy__box:hover .modal-buy__circle {
+  .modal-about__box:hover .modal-about__circle {
     transform: scale(1.5);
   }
   
   .circle:nth-child(1) {
-    
-  
+      
     transition-duration: 1000ms;
   }
   
