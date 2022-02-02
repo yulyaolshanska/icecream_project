@@ -1,347 +1,303 @@
 .modal-about__backdrop {
-    z-index: 9999;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // width: 100%;
+  // height: 100%;
+  background-image: linear-gradient(to right, rgba(238, 174, 202, 0.8), rgba(178, 181, 184, 0.6));
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 93px 15px;
+  overflow-y: scroll;
+}
+
+.modal-about {
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+
+  max-width: 75vw;
+  height: 75vh;
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-image: linear-gradient(
+    to right top,
+    rgba(211, 45, 117, 0.8),
+    rgba(238, 174, 202, 0.8),
+    rgba(170, 65, 170, 0.6)
+  );
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 52px 27px 32px 27px;
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: left;
+
+    transform: translate(-50%, -50%) scale(1);
+    // max-width: 700px;
+    // min-height: 760px;
     // width: 100%;
-    // height: 100%;
-    background-image: linear-gradient(
-      to right,
-      rgba(238, 174, 202, 0.8) ,
-      rgba(178, 181, 184, 0.6)     
-      );
-    opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 93px 15px;
-    overflow-y: scroll;
-  }
-  
-  .modal-about {
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-
-    max-width: 75vw;
-    height: 75vh;
-    width: 100%;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-    background-image: linear-gradient(
-      to right top,
-      rgba(211, 45, 117, 0.8) ,
-      rgba(238, 174, 202, 0.8) ,
-      rgba(170, 65, 170, 0.6)     
-      );
-  
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    padding: 52px 27px 32px 27px;
-  
-    @media screen and (min-width: $tablet) {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      text-align: left;
-  
-      transform: translate(-50%, -50%) scale(1);
-      // max-width: 700px;
-      // min-height: 760px;
-      // width: 100%;
-    }
-  
-    @media screen and (min-width: $desktop) {
-      max-width: 1056px;
-      // min-height: 1128px;
-    }
-  
   }
 
+  @media screen and (min-width: $desktop) {
+    max-width: 1056px;
+    // min-height: 1128px;
+  }
+}
 
-  body.modal-about-menu--visible {
-    overflow: hidden;
-  }
+body.modal-about-menu--visible {
+  overflow: hidden;
+}
 
-  
-  // .backdrop.visually-hidden .modal-about {
-  //   transform: translate(-50%, -50%) scale(1.2);
-  // }
-  
-  .modal-button__close {
-    width: 40px;
-    height: 40px;
-    background-color: var(--main-bgc);
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
+// .backdrop.visually-hidden .modal-about {
+//   transform: translate(-50%, -50%) scale(1.2);
+// }
+
+.modal-button__close {
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-bgc);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.modal-button__icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--accent-color);
+}
+
+.contact-modal__title {
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    text-align: left;
   }
-  
-  .modal-button__icon {
-    width: 24px;
-    height: 24px;
-    fill: var(--accent-color);
+}
+
+.contact-modal__img {
+  @media screen and (max-width: $mobile-only) {
+    display: none;
   }
-  
-  .contact-modal__title {
-    text-align: center;
-  
-    @media screen and (min-width: $tablet) {
-      text-align: left;
-    }
-  }
-  
-  .contact-modal__img {
-    @media screen and (max-width: $mobile-only) {
-      display: none;
-    }
-    display: block;
-    position: absolute;
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  width: 168px;
+  height: 133px;
+  z-index: -1;
+
+  @media screen and (min-width: $desktop) {
     top: 40px;
     right: 80px;
-    width: 168px;
-    height: 133px;
-    z-index: -1;
-  
-    @media screen and (min-width: $desktop) {
-      top: 40px;
-      right: 80px;
-      width: 300px;
-      height: 300px;
-    }
-  
-    &::after {
-      content: '';
-      background-image: url('../images/Contacts/ellipse.svg');
-      background-repeat: no-repeat;
-  
-      @media screen and (max-width: $mobile-only) {
-        display: none;
-      }
-      @media screen and (min-width: $tablet) {
-        height: 324px;
-        width: 322px;
-        position: absolute;
-        top: -120px;
-        right: -120px;
-        z-index: -2;
-      }
-      @media screen and (min-width: $desktop) {
-        top: -120px;
-        right: -15px;
-      }
-    }
+    width: 300px;
+    height: 300px;
   }
- 
-  
-  .modal-box {
-    position: relative;
-  
+
+  &::after {
+    content: '';
+    background-image: url('../images/Contacts/ellipse.svg');
+    background-repeat: no-repeat;
+
     @media screen and (max-width: $mobile-only) {
       display: none;
     }
-  
     @media screen and (min-width: $tablet) {
+      height: 324px;
+      width: 322px;
       position: absolute;
-      bottom: 40px;
-      right: 60px;
+      top: -120px;
+      right: -120px;
+      z-index: -2;
+    }
+    @media screen and (min-width: $desktop) {
+      top: -120px;
+      right: -15px;
     }
   }
-  .modal-box__list {
-    display: flex;
-    position: absolute;
-    top: 3px;
-    left: -130px;
-  }
-  
-  .modal-box__item {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 124px;
-    // &:not(:last-child) {
-    // }
-  }
-  
-  .modal-box__num {
-    font-family: Titan One;
-    @include text(400, 46px, 0.8, 0.04em, var(--accent-color));
-    z-index: 1;
-  
-    &::after {
-      content: '';
-      background-image: url('../images/Hero/Ellipse-white.png');
-      background-repeat: no-repeat;
-      width: 30px;
-      height: 30px;
-      position: absolute;
-      top: -2px;
-      right: 45px;
-      z-index: -1;
-    }
-  }
-  
-  .modal-box__coffes {
-    @include text(400, 14px, 1.23, 0, var(--accent-color));
-    padding-left: 20px;
-  }
-  
-  .contact-modal__button-box {
-    margin: 0 auto;
-    @media screen and (min-width: $tablet) {
-      display: flex;
-      justify-content: center;
-    }
-  }
-  
-  .contact-modal__button {
-    display: block;
-    min-width: 160px;
-    // margin: 0 auto;
-      
-  }
-  
-  .contact-modal__button:not(:last-child) {
-  
-    @media screen and (min-width: $tablet) {
-     // margin-right: 20px;
-    }
-    
-  }
-  
-  .contact-modal__link {
-    display: block;
-  
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
-  
-    @media screen and (min-width: $tablet) {
-      margin-bottom: 0;
-  
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-    }
-  }
-  
+}
 
+.modal-box {
+  position: relative;
+
+  @media screen and (max-width: $mobile-only) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+  }
+}
+.modal-box__list {
+  display: flex;
+  position: absolute;
+  top: 3px;
+  left: -130px;
+}
+
+.modal-box__item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 124px;
+  // &:not(:last-child) {
+  // }
+}
+
+.modal-box__num {
+  font-family: Titan One;
+  @include text(400, 46px, 0.8, 0.04em, var(--accent-color));
+  z-index: 1;
+
+  &::after {
+    content: '';
+    background-image: url('../images/Hero/Ellipse-white.png');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -2px;
+    right: 45px;
+    z-index: -1;
+  }
+}
+
+.modal-box__coffes {
+  @include text(400, 14px, 1.23, 0, var(--accent-color));
+  padding-left: 20px;
+}
+
+.contact-modal__button-box {
+  margin: 0 auto;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.contact-modal__button:not(:last-child) {
+  @media screen and (min-width: $tablet) {
+    // margin-right: 20px;
+  }
+}
 
 // =======modal buy block контейнер для формы и кругов
 
-
 .modal-about__block {
   justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: wheat;
-    overflow: scroll;
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: wheat;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 44vh;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  @media screen and (min-width: $mobile) {
     height: 50vh;
-    margin-bottom: 20px;
+  }
 }
 
+// form здесь форма начинается
 
-  // form здесь форма начинается
-
- // form здесь форма заканчивается
+// form здесь форма заканчивается
 
 // здесь начинается описание продукта
 
-
 .modal-about__write {
-    margin-bottom: 20px;
-    width: 360px;
-  }
-  
-  .modal-about__label {
-    position: sticky;
-    top: -1px;
-  
-    margin: 0;
-    padding: 16px;
-    color: var(--secondary-text-color);
-   background-color: var(--brand-color);
-   outline: var(--accent-color);
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-                0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-                0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  }
-  
-.modal-about__text {
-    // overflow: scroll;
-  overflow-x:hidden;
-  }
- 
+  margin-bottom: 20px;
+  width: 360px;
+}
 
+.modal-about__label {
+  position: sticky;
+  top: -1px;
+
+  margin: 0;
+  padding: 16px;
+  color: var(--secondary-text-color);
+  background-color: var(--brand-color);
+  outline: var(--accent-color);
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.modal-about__text {
+  // overflow: scroll;
+  overflow-x: hidden;
+}
 
 // здесь заканчивается описание продукта
-  
-
 
 // кружочки в модал
 
-  .modal-about__box {
-    border: 2px dashed #2a2a2a;
-    border-radius: 4px;
-    display: flex;
-   
-    justify-content: space-around;
-    align-items: center;
-    min-height: calc(10vh);
-    width: 80%;
-  }
+.modal-about__box {
+  border: 2px dashed #2a2a2a;
+  border-radius: 4px;
+  display: flex;
 
+  justify-content: space-around;
+  align-items: center;
+  min-height: calc(10vh);
+  width: 80%;
+}
 
-   .modal-about__box--bottom {
-    margin-top: 30px;
+.modal-about__box--bottom {
+  margin-top: 30px;
+}
 
-  }
+.modal-about__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  height: 50px;
+  // flex-shrink: 0;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-  .modal-about__circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: min-content;
-    height: 50px;
-    // flex-shrink: 0;
-    margin-left: 30px;
-    margin-right: 30px;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-                0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-                0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  
-    transition-property: transform;
-    transition-duration: 1000ms;
+  transition-property: transform;
+  transition-duration: 1000ms;
 
-    background-image: radial-gradient(
-      circle at center,
-      var(--brand-color) 10%, 
-      var(--accent-color) 50%
-    );
-          
-  }
-  
-  .modal-about__box:hover .modal-about__circle {
-    transform: scale(1.5);
-  }
-  
-  .circle:nth-child(1) {
-      
-    transition-duration: 1000ms;
-  }
-  
+  background-image: radial-gradient(
+    circle at center,
+    var(--brand-color) 10%,
+    var(--accent-color) 50%
+  );
+}
+
+.modal-about__box:hover .modal-about__circle {
+  transform: scale(1.5);
+}
+
+.circle:nth-child(1) {
+  transition-duration: 1000ms;
+}
