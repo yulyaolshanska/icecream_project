@@ -131,7 +131,7 @@
 
   @media screen and (min-width: $tablet) {
     width: 620px;
-    height: 482px;
+    height: 462px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -172,8 +172,6 @@
   position: relative;
   flex-direction: column;
   width: 124px;
-  // &:not(:last-child) {
-  // }
 }
 
 .modal-box__num {
