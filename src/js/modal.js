@@ -1,3 +1,5 @@
+"use strict";
+// Это комментарий. Дальше идет весь код JS-файла
 // (() => {
 //     const refs = {
 //       openModalBtn: document.querySelector('[data-modal-open]'),

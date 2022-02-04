@@ -1,3 +1,5 @@
+"use strict";
+// Это комментарий. Дальше идет весь код JS-файла
 (() => {
     const menuBtnRef = document.querySelector("[data-menu-button]");
     const mobileMenuRef = document.querySelector("[data-menu]");
