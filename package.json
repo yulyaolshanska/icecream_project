@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://yulyaolshanska.github.io/project_group_10",
+  "homepage": "https://yulyaolshanska.github.io/icecream_project",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /project_group_10/"
+    "build": "parcel build src/*.html --public-url /icecream_project/"
   },
   "repository": {
     "type": "git",
