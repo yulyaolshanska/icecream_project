@@ -11,6 +11,7 @@
               ./images/About/about-cow-desktop.webp    1x,
               ./images/About/about-cow-desktop@2x.webp 2x
             "
+            loading="lazy"
           />
           <source
             media="(min-width: 768px)"
@@ -18,6 +19,7 @@
               ./images/About/about-cow-tablet.webp    1x,
               ./images/About/about-cow-tablet@2x.webp 2x
             "
+            loading="lazy"
           />
           <source
             media="(min-width: 320px)"
@@ -25,11 +27,13 @@
               ./images/About/about-cow-mobile.webp    1x,
               ./images/About/about-cow-mobile@2x.webp 2x
             "
+            loading="lazy"
           />
           <img
             src="./images/About/about-cow-tablet.png"
             class="about__img"
             alt="Cow with a jug of milk"
+            loading="lazy"
           />
         </picture>
 
@@ -47,7 +51,9 @@
           <p class="about__text about__text--light about__text--last">
             Aliquam erat volutpat. Aenean accumsan.
           </p>
-          <button type="button" class="button button--white about__btn modal-about-menu--open">Read more</button>
+          <button type="button" class="button button--white about__btn modal-about-menu--open">
+            Read more
+          </button>
         </div>
       </div>
     </div>
