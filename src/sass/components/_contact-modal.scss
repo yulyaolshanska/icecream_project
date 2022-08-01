@@ -1,5 +1,5 @@
 .contact_modal__backdrop {
-  z-index: 900;
+  z-index: 90;
   position: fixed;
   top: 0;
   left: 0;
@@ -9,17 +9,23 @@
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 93px 15px;
+  visibility: visible;
   overflow-y: scroll;
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .contact-modal {
-  overflow: hidden;
+  // overflow: hidden;
   text-align: center;
   position: relative;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 620px;
   background-color: var(--light-section-bgc);
-  z-index: 950;
+  // z-index: 900;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -49,6 +55,8 @@
 }
 
 .modal-button__close {
+  top: 8px;
+  right: 8px;
   width: 40px;
   height: 40px;
   background-color: var(--main-bgc);
@@ -58,8 +66,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0;
-  right: 0;
+  // z-index: 950;
+
   cursor: pointer;
 }
 
