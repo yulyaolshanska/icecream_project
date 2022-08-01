@@ -28,16 +28,18 @@
 
   function toggleModal() {
     document.body.classList.toggle('contact-modal-open');
-
-    refs.contactModal.classList.toggle('visually-hidden');
+    // .classList.toggle('modal-container--is-hidden')
+    refs.contactModal.classList.toggle('contact_modal__backdrop--hidden');
     let paragraph = document.querySelector('.js-contact-modal__title');
     paragraph.textContent = 'Our Location';
     // refs.modalBuy.classList.toggle('visually-hidden');
   }
 
   function toggleModaFr() {
+    refs.contactModal.classList.toggle('contact_modal__backdrop--hidden');
+
     document.body.classList.toggle('contact-modal-open');
-    refs.contactModal.classList.toggle('visually-hidden');
+    // refs.contactModal.classList.toggle('visually-hidden');
     let paragraph = document.querySelector('.js-contact-modal__title');
     paragraph.textContent = 'Franchise!';
   }
