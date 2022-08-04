@@ -1,52 +1,51 @@
-"use strict";
+'use strict';
 // Это комментарий. Дальше идет весь код JS-файла
-// (() => {
-//     const refs = {
-//       openModalBtn: document.querySelector('[data-modal-open]'),
-//       closeModalBtn: document.querySelector('[data-modal-close]'),
-//       modal: document.querySelector('[data-modal]'),
-//     };
-  
-//     refs.openModalBtn.addEventListener('click', toggleModal);
-//     refs.closeModalBtn.addEventListener('click', toggleModal);
-  
-//   function toggleModal() {
-//     document.body.classList.toggle('mobile-menu--open');
-//       refs.modal.classList.toggle('backdrop--is-hidden');
-//   };
-//        // закрытие мобильного меню на более широких экранах в случае изменения ориентации  устройства
-//   // window.matchMedia('(min-width: 600px)').addEventListener('change', e => {
-//   window.matchMedia('(min-width: 1280px)').addEventListener('change', e => {
-//     if (!e.matches) return;
-//     mobileMenu.classList.remove('mobile-menu--open');
-    
-   
-//   });
-// }) ();
-
 (() => {
   const mobileMenu = document.querySelector('.mobile-menu--js');
   const openMenuBtn = document.querySelector('.mobile-menu__open--js');
   const closeMenuBtn = document.querySelector('.mobile-menu__close--js');
-  const toggleMenu = () => {
-    const isMenuOpen =
-      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+  const headerBackdrop = document.querySelector('.header__backdrop');
+
+  const openMenu = () => {
+    const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    mobileMenu.classList.toggle('mobile-menu--is-open');
-    openMenuBtn.classList.toggle('--is-open')
-    // const scrollLockMethod = !isMenuOpen
-    //   ? 'disableBodyScroll'
-    //   : 'enableBodyScroll';
-    // bodyScrollLock[scrollLockMethod](document.body);
+    mobileMenu.classList.add('mobile-menu--is-open');
+    openMenuBtn.classList.add('--is-open');
+    document.body.classList.add('menu--is-open');
+    headerBackdrop.classList.remove('visually-hidden');
   };
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
-  // закрытие мобильного меню на более широких экранах в случае изменения ориентации  устройства
-  // window.matchMedia('(min-width: 600px)').addEventListener('change', e => {
-  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-      if (!e.matches) return;
-      mobileMenu.classList.remove('mobile-menu--is-open');
+
+  openMenuBtn.addEventListener('click', openMenu);
+  closeMenuBtn.addEventListener('click', openMenu);
+
+  function closeMenu() {
+    mobileMenu.classList.remove('mobile-menu--is-open');
+    document.body.classList.remove('menu--is-open');
+    headerBackdrop.classList.add('visually-hidden');
+  }
+
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape' || ' ') {
       openMenuBtn.setAttribute('aria-expanded', false);
-      // bodyScrollLock.enableBodyScroll(document.body);
-    });
-  })();
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('click', e => {
+    const target = e.target;
+    if (
+      !target.closest('.mobile-menu') &&
+      !target.closest('.button__buy') &&
+      !target.closest('.mobile-menu__switch')
+    ) {
+      closeMenu();
+    }
+  });
+
+  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+    if (!e.matches) return;
+    openMenuBtn.setAttribute('aria-expanded', false);
+
+    closeMenu();
+  });
+})();

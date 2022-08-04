@@ -4,14 +4,9 @@
   const refs = {
     openLocationModalBtn: document.querySelector('[data-contact-locations-modal-open]'),
     openFranchiseModalBtn: document.querySelector('[data-contact-franchise-modal-open]'),
-
-    // openModaBtn: document.querySelector('[data-contact-franchise-modal-open]'),
     closeModalBtn: document.querySelector('[data-contact-modal-close]'),
     contactModal: document.querySelector('[data-contact-modal]'),
-
     ModalFranchiseBtn: document.querySelector('.contact-franchise-modal'),
-    // closeModalBuy: document.querySelector('.modal-buy--close'),
-    // modalBuy: document.querySelector('.modal-buy__offer'),
   };
   console.log('contactModal', refs.contactModal);
   console.log('openLocationModalBtn', refs.openLocationModalBtn);
@@ -21,25 +16,30 @@
   refs.openLocationModalBtn.addEventListener('click', toggleModal);
   refs.openFranchiseModalBtn.addEventListener('click', toggleModaFr);
   refs.ModalFranchiseBtn.addEventListener('click', toggleTitle);
-
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  // document.addEventListener('touchstart', onTouchStart, {passive: true});
+  window.addEventListener('click', e => {
+    const target = e.target;
+    if (
+      !target.closest('contact-modal') &&
+      !target.closest('[data-contact-locations-modal-open]') &&
+      !target.closest('[data-contact-franchise-modal-open]')
+    ) {
+      refs.contactModal.classList.add('contact_modal__backdrop--hidden');
+      document.body.classList.remove('contact-modal-open');
+    }
+  });
 
   function toggleModal() {
     document.body.classList.toggle('contact-modal-open');
-    // .classList.toggle('modal-container--is-hidden')
     refs.contactModal.classList.toggle('contact_modal__backdrop--hidden');
     let paragraph = document.querySelector('.js-contact-modal__title');
     paragraph.textContent = 'Our Location';
-    // refs.modalBuy.classList.toggle('visually-hidden');
   }
 
   function toggleModaFr() {
     refs.contactModal.classList.toggle('contact_modal__backdrop--hidden');
-
     document.body.classList.toggle('contact-modal-open');
-    // refs.contactModal.classList.toggle('visually-hidden');
     let paragraph = document.querySelector('.js-contact-modal__title');
     paragraph.textContent = 'Franchise!';
   }
