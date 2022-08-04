@@ -17,6 +17,14 @@
   refs.openModalBuyMenu.addEventListener('click', toggleModal);
   refs.closeModalBuyMenu.addEventListener('click', toggleModal);
 
+  window.addEventListener('click', e => {
+    const target = e.target;
+    if (!target.closest('.modal-buy') && !target.closest('.button__buy')) {
+      refs.modalBuyMenu.classList.add('modal-buy__backdrop--hidden');
+      document.body.classList.remove('modal-buy-menu--visible');
+    }
+  });
+
   function toggleModal() {
     document.body.classList.toggle('modal-buy-menu--visible');
     refs.modalBuyMenu.classList.toggle('modal-buy__backdrop--hidden');
